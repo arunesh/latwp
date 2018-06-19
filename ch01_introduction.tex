@@ -1,0 +1,67 @@
+\section{Introduction}\label{sec:intro}
+
+\subsection{Towards a Decentralized Application Stack}
+
+The introduction of Bitcoin \cite{nakamoto2009bitcoin} has triggered a new wave of decentralization in computing. 
+Bitcoin illustrated a novel set of benefits: decentralized control, where ``no one'' owns or controls the network; immutability,
+where written data is tamper-resistant (``forever''); and the ability to create \& transfer assets on the network, without reliance on a central entity.
+
+The initial excitement surrounding Bitcoin stemmed from its use as a token of value, for example as an alternative to government-issued currencies.
+As people learned more about the underlying blockchain technology, they extended the scope of the technology itself (e.g. smart contracts), as well as applications (e.g. intellectual property).
+
+With this increase in scope, single monolithic ``blockchain'' technologies are being re-framed and refactored into building blocks at four levels of the stack:
+\begin{enumerate}
+ \item Applications
+ \item Decentralized computing platforms (``blockchain platforms'')
+ \item Decentralized processing (``smart contracts'') and decentralized storage (file systems, databases), and decentralized communication
+ \item Cryptographic primitives, consensus protocols, and other algorithms
+\end{enumerate}
+
+\subsection{Blockchains and Databases}
+We can frame a traditional blockchain as a database (DB), in the sense that it provides a storage mechanism.
+If we measure the Bitcoin blockchain by traditional DB criteria, it’s terrible: throughput is just a few transactions per second (tps), latency before a single confirmed write is 10 minutes, and capacity is a few dozen GB.
+Furthermore, adding nodes causes more problems: with a doubling of nodes, network traffic quadruples with no improvement in throughput, latency, or capacity.
+It also has essentially no querying abilities: a NoQL\footnote{We are introducing the term NoQL to describe a database with essentially no query abilities. This term is not to be confused with the database company noql (\url{http://www.noql.com}).} database.
+
+In contrast, a modern distributed DB can have throughput exceeding 1 million tps, capacity of petabytes and beyond, latency of a fraction of a second, and throughput and capacity that increases as nodes get added.
+Modern DBs also have rich abilities for insertion, queries, and access control in SQL or NoSQL flavors; in fact SQL is an international ANSI and ISO standard.
+
+\subsection{The Need for Scale}
+Decentralized technologies hold great promise to rewire modern financial systems, supply chains, creative industries, and even the Internet itself.
+But these ambitious goals need scale: the storage technology needs throughput of up to millions of transactions per second (or higher), sub-second latency\footnote{It takes light 140 ms to make one trip around the world, or 70 ms halfway around. Some financial applications need 30-100 ms latency, though due to speed-of-light constraints those necessarily need to be more locally constrained. Section \ref{sec:latency} explores this in detail.}, and capacity of petabytes or more.
+These needs exceed the performance of the Bitcoin blockchain by many orders of magnitude.
+
+\subsection{BigchainDB : Blockchains Meet Big Data}
+This paper introduces BigchainDB, which is for database-style decentralized storage: a blockchain database.
+BigchainDB combines the key benefits of distributed DBs and traditional blockchains, with an emphasis on scale, as Table \ref{tab:bigchain_comparison} summarizes.
+
+\begin{table}[h]
+  \caption{BigchainDB compared to traditional blockchains, and traditional distributed DBs}
+  \footnotesize
+  \makebox[\textwidth][c]{
+  \centering
+  \setlength\extrarowheight{3pt}
+  \begin{tabular}{ | m{\dimexpr 0.25\linewidth-2\tabcolsep} |
+	  M{\dimexpr 0.25\linewidth-2\tabcolsep} |
+	  M{\dimexpr 0.25\linewidth-2\tabcolsep} |
+	  M{\dimexpr 0.25\linewidth-2\tabcolsep} |} \Xhline{4\arrayrulewidth}\rowcolor{black}
+  				                  & \color{white} Traditional Blockchain & \color{white} Traditional Distributed DB & \color{white} BigchainDB \\\Xhline{4\arrayrulewidth}
+  High Throughput; increases with nodes$\uparrow$ & - 		           & \checkmark                  & \checkmark          \\\hline
+  Low Latency                                     & - 		           & \checkmark                  & \checkmark          \\\hline
+  High Capacity; increases with nodes$\uparrow$   & - 		           & \checkmark                  & \checkmark          \\\hline
+  Rich querying                                   & - 		           & \checkmark                  & \checkmark          \\\hline
+  Rich permissioning                              & - 		           & \checkmark                  & \checkmark          \\\hline
+  Decentralized control                           & \checkmark 		   & -                          & \checkmark          \\\hline
+  Immutability                                    & \checkmark 		   & -                          & \checkmark          \\\hline
+  Creation \& movement of digital assets          & \checkmark 		   & -                          & \checkmark          \\\hline
+  Event chain structure				  & Merkle Tree            & - 				& Hash Chain          \\
+  \Xhline{4\arrayrulewidth}
+  \end{tabular}
+  }
+  \label{tab:bigchain_comparison}
+\end{table}
+
+We built BigchainDB on top of an enterprise-grade distributed DB, from which
+BigchainDB inherits high throughput, high capacity, low latency, a full-featured efficient NoSQL query language, and permissioning.
+Nodes can be added to increase throughput and capacity.
+
