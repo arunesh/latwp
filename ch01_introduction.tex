@@ -35,31 +35,31 @@ These needs exceed the performance of the Bitcoin blockchain by many orders of m
 This paper introduces BigchainDB, which is for database-style decentralized storage: a blockchain database.
 BigchainDB combines the key benefits of distributed DBs and traditional blockchains, with an emphasis on scale, as Table \ref{tab:bigchain_comparison} summarizes.
 
-\begin{table}[h]
-  \caption{BigchainDB compared to traditional blockchains, and traditional distributed DBs}
-  \footnotesize
-  \makebox[\textwidth][c]{
-  \centering
-  \setlength\extrarowheight{3pt}
-  \begin{tabular}{ | m{\dimexpr 0.25\linewidth-2\tabcolsep} |
-	  M{\dimexpr 0.25\linewidth-2\tabcolsep} |
-	  M{\dimexpr 0.25\linewidth-2\tabcolsep} |
-	  M{\dimexpr 0.25\linewidth-2\tabcolsep} |} \Xhline{4\arrayrulewidth}\rowcolor{black}
-  				                  & \color{white} Traditional Blockchain & \color{white} Traditional Distributed DB & \color{white} BigchainDB \\\Xhline{4\arrayrulewidth}
-  High Throughput; increases with nodes$\uparrow$ & - 		           & \checkmark                  & \checkmark          \\\hline
-  Low Latency                                     & - 		           & \checkmark                  & \checkmark          \\\hline
-  High Capacity; increases with nodes$\uparrow$   & - 		           & \checkmark                  & \checkmark          \\\hline
-  Rich querying                                   & - 		           & \checkmark                  & \checkmark          \\\hline
-  Rich permissioning                              & - 		           & \checkmark                  & \checkmark          \\\hline
-  Decentralized control                           & \checkmark 		   & -                          & \checkmark          \\\hline
-  Immutability                                    & \checkmark 		   & -                          & \checkmark          \\\hline
-  Creation \& movement of digital assets          & \checkmark 		   & -                          & \checkmark          \\\hline
-  Event chain structure				  & Merkle Tree            & - 				& Hash Chain          \\
-  \Xhline{4\arrayrulewidth}
-  \end{tabular}
-  }
-  \label{tab:bigchain_comparison}
-\end{table}
+%\begin{table}[h]
+%  \caption{BigchainDB compared to traditional blockchains, and traditional distributed DBs}
+%  \footnotesize
+%  \makebox[\textwidth][c]{
+%  \centering
+%  \setlength\extrarowheight{3pt}
+%  \begin{tabular}{ | m{\dimexpr 0.25\linewidth-2\tabcolsep} |
+%	  M{\dimexpr 0.25\linewidth-2\tabcolsep} |
+%	  M{\dimexpr 0.25\linewidth-2\tabcolsep} |
+%	  M{\dimexpr 0.25\linewidth-2\tabcolsep} |} \Xhline{4\arrayrulewidth}\rowcolor{black}
+%  				                  & \color{white} Traditional Blockchain & \color{white} Traditional Distributed DB & \color{white} BigchainDB \\\Xhline{4\arrayrulewidth}
+%  High Throughput; increases with nodes$\uparrow$ & - 		           & \checkmark                  & \checkmark          \\\hline
+%  Low Latency                                     & - 		           & \checkmark                  & \checkmark          \\\hline
+%  High Capacity; increases with nodes$\uparrow$   & - 		           & \checkmark                  & \checkmark          \\\hline
+%  Rich querying                                   & - 		           & \checkmark                  & \checkmark          \\\hline
+%  Rich permissioning                              & - 		           & \checkmark                  & \checkmark          \\\hline
+%  Decentralized control                           & \checkmark 		   & -                          & \checkmark          \\\hline
+%  Immutability                                    & \checkmark 		   & -                          & \checkmark          \\\hline
+%  Creation \& movement of digital assets          & \checkmark 		   & -                          & \checkmark          \\\hline
+%  Event chain structure				  & Merkle Tree            & - 				& Hash Chain          \\
+%  \Xhline{4\arrayrulewidth}
+%  \end{tabular}
+%  }
+%  \label{tab:bigchain_comparison}
+%\end{table}
 
 We built BigchainDB on top of an enterprise-grade distributed DB, from which
 BigchainDB inherits high throughput, high capacity, low latency, a full-featured efficient NoSQL query language, and permissioning.
