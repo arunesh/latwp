@@ -189,7 +189,32 @@ velocity.
 \end{figure}
 
 In the context of Latitude, the performance of the blockchain is important. The blockchain will handle different types
-of data and transactions which will require different levels of consensus and trust.
+of data and transactions which will require different levels of consensus and trust. Figure \cite{fig:tps_lat} shows the
+different types of transactions that the Latitude blockchain can process and the performance we expect to achieve. Shown
+are four types of transactions:
+\begin{itemize}
+    \item Datastore transactions: These refer to basic transactions to store data values into the geo-spatial data
+        store. For instance, if a user shares their driving data, this can include the sensor information, lat/lng of
+        the trip taken and any mapping data collected. For ridesharing applications, this can include any multi-model
+        ride details that the user has booked. We expect the blockchain to be able to process close to 1-10 million
+        transactions per second, since most such transactions require very low level of consensus and can tolerate 
+        eventual consistency \cite{eventual_con}.
+    \item Algorithmic computations: These refer to transactions which include executing known algorithms on the
+        blockchain. For instance, this could include the computation of various driver behavior algorithms with the
+        computation being shared among certain participants on the network. Another computation could include statistics
+        such as real-time traffic or aggregate traffic statistics shared with a city for better zoning and planning
+        purposes. The amount of consensus required is relativel small but higher than datastore operations in order to
+        ensure correct execution of algorithms and lack of malicious intent. Also such operations would require strong
+        consistency for their CRUD funtionalities. We expect the Latitude design to support 10-100K transactions per
+        second at its peak usage.
+    \item Data sharing contracts: These transactions refer to the creation, deletion or arbitration of long-term sharing
+        smart contracts between participating entities. For instance, it could include a new contract between an
+        insurance company and a data provider for sharing certaint types of driver score data for certain geographic
+        locations. Since these transactions have higher value they require larger amount of trust and consensus in the
+        system. Latitude shall support a transaction speed of around 100-1000 transactions per second for this category.
+    \item Governance operations:
+
+\end{itemize}
 
 Performance:
 - Transaction speed. Data throughput. Storage capabilities.
