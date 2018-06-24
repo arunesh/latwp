@@ -91,6 +91,24 @@ Cryptographic proofs for applications:
 
 \noindent
 {\textsf Cryptoeconomics and Governance:}
+Cryto-economics refers to the mechanics of the protocol underlying the blockchain operations which creates incentives
+for the various stakeholders. For example, in the Latitude Blockchain it is possible to reward users for sharing their data
+for certain purposes. For example, users can be rewarded if they share traffic data or accident information or better
+routes. This is similar to the Waze model but creates legitimate rewards for users that have meaningful value outside
+the Waze application. 
+
+The core building block of the cryptoeconomics in Latitude is the Latitude Token, or LAT. This will be transacted in
+each and every micro-transaction that takes place on the blockchain to create the right incentives, enforce smart
+contracts and penalize Byzantine behavior. One of the fundamental design principles behind the protocol for the LAT
+token is to create incentives assuming nodes are greedy and are interested in maximizing their gain. We will also build
+safeguards against reasonable amount of collusion among nodes to subvert the system. The design is crafted such that the
+best way for a node to maximize its revenue would be to participate with full honesty.
+
+Latitude shall employ a Proof of Stake model (delegated or non-delegted) for particpation and core node-level mining. This mechanism has recently
+gained popularity among a notable number of blockchains \cite{dpos_steemit}. This also allows for deposit slashing as a
+technique to tackle Byzantine behavior. Latitude will employ techniques such as Minimal Slashing \cite{buterin_slashing}
+for Byzantine fault tolerance and safety under distributed asynchronous operation.
+
  - Crypto-incentives for honest operation.
  - Penalties for malicious intent.
  - Governance based on consensus and roles using a council.
