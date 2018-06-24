@@ -56,22 +56,49 @@ Datastore
  - Primitives for storing driving data for autonomous vehicles
 
 \subsection{Cryptographic primitives}
-Standard data encryption techniques allow for security guarantees in Latitude. Anonymity guarantees are provided using
-privacy-preserving set operations such as given in \cite{kissner_set}, with suitable modifications to
-anonymize spatial data which have user-location considerations \cite{divanis_kanon,xu_loc_anon}.
-Cryptographic primitives for:
- - Security and privacy of data.
- - Anonymity guarantees using cryptographic set operations.
- - Enforcement of privacy when sharing data.
- - Sharing of “computation” instead of data when possible.
- - For eg: Sharing of DriverScore using a vetted algorithm.
- - Sharing proximity to a landmark instead of lat/lng.
- - Ability to find bad actors.
- - Detect privacy, anonymity and security violations.
+
+Latitude makes use of strong cryptographic protocols, primitives, encryptions, secure hash function, certificates,
+multi-party key distribution, proxy key reencryption, Elliptic-curve based Digital Signatures \cite{ecdsa} and other
+state-of-the-art mechanisms to provide strong security, privacy, access control, confidentiality and anonymity
+guarantees. Specifically for geo-spatial data such as location, anonymity guarantees can be very important part of data
+sharing smart contracts and privacy policies such as GDPR \cite{gdpr}. Latitude provides anonymity guarantees using
+cryptographic set preserving computations as derived from research in \cite{kissner_set}. These can be suitably modified
+to allow for location-based anonymity which requires stronger guarantees when compared to set-based anonymity methods
+\cite{divanis_kanon,xu_loc_anon}.
+
+Latitude also uses Merkle trees for cryptographic proof of audit, existence of data, verifiable computations and such
+\cite{becker2008}. These proof can be shared as certificates among participants or be used in the Latitude smart
+contract system discussed later. The proofs allow for verification such as if a certain amount of data was shared, or as
+simple as if a certain data exists. They also allow for the maintenance of a cryptographic log of all operations that
+happen on the network. These techniques are similar to the ones used by some of the other blockchains today
+\cite{buterin_merkle}.
 
 
- The cryptographic system can provide various proofs that can be used by applications, users and other participants. The
- proofs include the ones listed below but are not limited to these:
+%Cryptographic primitives for:
+% - Security and privacy of data.
+% - Anonymity guarantees using cryptographic set operations.
+% - Enforcement of privacy when sharing data.
+% - Sharing of “computation” instead of data when possible.
+% - For eg: Sharing of DriverScore using a vetted algorithm.
+% - Sharing proximity to a landmark instead of lat/lng.
+% - Ability to find bad actors.
+% - Detect privacy, anonymity and security violations.
+%
+%Cryptographic proofs for applications:
+% - Proof of Location. 
+% - Proof of ride. 
+% - Proof of mapping 
+%      (road/landmark exists or does not exist).
+% - Proof of driver score 
+% - Open, trusted, understood driver score computation algorithms.
+% - Cryptographic proofs can be shared among entities, safely, securely.
+
+
+In addition to these standard primitives discussed above, Latitude provides a host of other proofs that are tailor made
+for geo-spatial, mapping, location and sensor data for driving. Thes proofs that can be used by applications, users and
+other participants in the network. The network can be extended to create new forms of proofs as the application needs
+grow. The proofs include the ones listed below but are not limited to these:
+
  \begin{itemize}
      \item Proof of location: This is perhaps the most easily motivated functionality that the Latitude blockchain can
          provide. Proof of location is a cryptographic credential that proves that a given user, entity or participant
@@ -103,7 +130,7 @@ Cryptographic primitives for:
          if a user actually makes that route from A to B, that helps create the proof of its existence. This is useful
          for trusted and verifiable mapping / routing applications.
  \end{itemize}
-\subsection{Latitude Smart contract system:}
+\subsection{Latitude Smart contract system}
 
 Smart contract system for Transportation applications.
  - Ability to convert “policies” such as GDPR into smart contract code.
@@ -113,14 +140,6 @@ Smart contract system for Transportation applications.
    - DriverScore, Location heatmaps, Statistics.
    - Enforcing or verifying privacy and other govt policies/regulations.
 
-Cryptographic proofs for applications:
- - Proof of Location. 
- - Proof of ride. 
- - Proof of mapping 
-      (road/landmark exists or does not exist).
- - Proof of driver score 
- - Open, trusted, understood driver score computation algorithms.
- - Cryptographic proofs can be shared among entities, safely, securely.
 
 \noindent
 \subsection{Cryptoeconomics and Governance}
@@ -204,7 +223,7 @@ User incentives:
    - Best interest of users to act honestly by design.
 
 \noindent
-\subsection{Performance considerations:}
+\subsection{Performance considerations}
 
 When thinking of performance, one of the key metrics that is hotly debated in the community is transactions per second.
 Bitcoin is know for its long time to produce a block, on the order of minutes which limits the number of transactions
