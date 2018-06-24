@@ -212,12 +212,20 @@ are four types of transactions:
         insurance company and a data provider for sharing certaint types of driver score data for certain geographic
         locations. Since these transactions have higher value they require larger amount of trust and consensus in the
         system. Latitude shall support a transaction speed of around 100-1000 transactions per second for this category.
-    \item Governance operations:
+    \item Governance operations: The Governance operations require the highest amount of trust and full consensus of the
+        network. These include voting to add/remove council members, critical council decisions such as forks or
+        updates/upgrades, decisions on high-value smart contract disputes, etc. The transaction velocity is low for
+        reasons of trust, accuracy and correctness and thus we expect the Latitude blockchain to support 1-10
+        transactions per second under this category.
 
 \end{itemize}
 
-Performance:
-- Transaction speed. Data throughput. Storage capabilities.
+Another metric of importance for Latitude is the storage capacity in the network. This can be important for
+datastore operations. We expect the storage capacity, network bandwidth and any other computing resource to become
+available on an incentived model as determined by usage contracts. For instance, if a user is willing to share data with
+a data consumer, the consumer should be able to allocate token resources to provision the network with sufficient
+storage. The token can be used to purchase storage using other blockchain storage providers such as Filecoin, Siacoin or
+can be used to incentivize nodes to directly supplant on-chain storage.
 
 \begin{figure}[t]
     \centering
