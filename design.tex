@@ -90,8 +90,14 @@ Cryptographic proofs for applications:
  - Cryptographic proofs can be shared among entities, safely, securely.
 
 \noindent
-\subsection{Cryptoeconomics and Governance:}
-Cryto-economics refers to the mechanics of the protocol underlying the blockchain operations which creates incentives
+\subsection{Cryptoeconomics and Governance}
+
+Crytpeconomics and governance refer to the incentive structure in the Latitude blockchain and the decentralized decision
+making structure. These discussions go hand-in-hand as they specify how the blockchain functions in a distributed and
+decentralized manner in the real world.
+
+\subsubsection{Crytpoeconomics}
+Crytoeconomics refers to the mechanics of the protocol underlying the blockchain operations which creates incentives
 for the various stakeholders. For example, in the Latitude Blockchain it is possible to reward users for sharing their data
 for certain purposes. For example, users can be rewarded if they share traffic data or accident information or better
 routes. This is similar to the Waze model but creates legitimate rewards for users that have meaningful value outside
@@ -109,7 +115,7 @@ gained popularity among a notable number of blockchains \cite{dpos_steemit}. Thi
 technique to tackle Byzantine behavior. Latitude will employ techniques such as Minimal Slashing \cite{buterin_slashing}
 for Byzantine fault tolerance and safety under distributed asynchronous operation.
 
-
+\subsubsection{Governance}
 Governance refers to a decentralized manner in which decisions are made using a consensus mechanism on the blockchain.
 Decisions include basic constructs whether a node can join or leave the network. Or it can include key decisions on
 whether an upgrade should be mandated on every node, a given participant such as a data provider should be penalized. It
@@ -134,6 +140,28 @@ enforcement.
  - Some council members can have restricted access.
  - Eg: US govt can have voting rights on US data/users, etc.
 
+\subsubsection{User incentives}
+Token economics allow for the creation of what we call user incentives. These are protocol constructs in the blockchain
+that allow users to benefit from the value they create for the ecosystem. Refer to \cite{token_ecos} for an overview on
+incentive mechanisms to reward users for various methods of participation in the network. In general, the Latitude token
+ecosystem will be based on market economics, that is, supply and demand from various participants will be the primary
+driver for prices and incentives in the network. This philosophy falls in line with decentralized control and operation
+while also allowing for creating most reward for honest behavior in the network.
+
+The ability of user incentives to exist in a decentralized manner can be disruptive to existing incumbents in the
+sharing economy space, such as Uber, Lyft, Airbnb, etc since users can get rewarded in a tangible manner for their
+contributions \cite{sharing_eco_bc}. Consumers shifted to apps in the sharing economy as they provided cheaper and
+better alternatives to traditional services like Uber and Airbnb. However, since all transactions go through these
+centralized providers, the platform owners determine the fees, percentages and are in complete control of any data
+practices and policies which cannot be verified. They often become accused of predatory behavior. Using blockchain based
+incentives, sharing and open-source software these problems can be addressed in a singular fashion.
+
+As an exmaple, consider the Ridesharing application. As users contribute data on what rides they are taking, it becomes
+possible for the network to reward them with tokens. They could, upon sufficient contribution, redeem them for free
+rides or share with them others on the network. A similar model can be adopted for data concerning driver behavior where
+drivers using different apps and sensor algorithms can elect to share their data towards building a better driver score
+in return for suitable incentives.
+
 User incentives:
  - Users have full control over their data and computation.
  - Users can issue or request proofs to carry over to other applications.
@@ -142,8 +170,34 @@ User incentives:
    - Can be detected using a combination of consensus and incentives.
    - Best interest of users to act honestly by design.
 
-
 \noindent
-{\textsf Performance considerations:}
+\subsection{Performance considerations:}
+
+When thinking of performance, one of the key metrics that is hotly debated in the community is transactions per second.
+Bitcoin is know for its long time to produce a block, on the order of minutes which limits the number of transactions
+the network can process. Figure \ref{fig:tps_speed} shows a comparison of the major blockchains today with respect to
+this cricial metric. Note that these blockchains shown in the Figure are primarily evaluated against the concept of a
+transaction which represents a transfer of assets, goods or monetary value digitally on the blockchain. Stellar and
+Ripple are two blockchains that have gained popularity for financial transactions as they tout a higher transcation
+velocity. 
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.90\textwidth]{tps_speed2.png}
+  \caption{Comparison of transactions per second of the major blockchains today.}
+    \label{fig:tps_speed}
+\end{figure}
+
+In the context of Latitude, the performance of the blockchain is important. The blockchain will handle different types
+of data and transactions which will require different levels of consensus and trust.
+
 Performance:
 - Transaction speed. Data throughput. Storage capabilities.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.75\textwidth]{tps_lat2.png}
+  \caption{Expected Transaction per second velocity of various types of functionalities on the Latitude Blockchain.}
+    \label{fig:tps_lat}
+\end{figure}
+
