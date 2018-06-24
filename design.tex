@@ -88,9 +88,20 @@ Cryptographic primitives for:
          building, a sign post at a given lat/lng. This can also be used to prove the existence of a particular road or
          the lack of. These proofs can be constructed using the proof of location and added consensus among users and
          can form the backbone for verified mapping and landmark data.
-     \item Proof of driver score: 
-     \item Proof of traffic : 
-     \item Proof of routes : 
+     \item Proof of driver score: This proof can be computed on the blockchain over the data aggregated on the
+         datastore. The algorithm itself shall be made available to the nodes either as an executable docker image or an
+         opensource version. This allows different nodes to run the computation and create a certificate of a certain
+         driver score which can then be attributed to the driver or user. This open framework can also allow different
+         driver score algorithms to co-exist in the system creating a community where better driver score algorithms can
+         be agreed upon and used as the industry standard.
+     \item Proof of traffic:  Similar to the driver score, traffic is also an algorithm that looks at the statistics of
+         location and speed data on roads. The proof is similarly computed through consensus and recorded as a
+         certificate on the blockchain. The proof could be about real-time traffic or historic traffic patterns which
+         can be shared with smart city applications or census or regulatory bodies.
+     \item Proof of routes: Similar to the functionality in the popular Waze app, this is about whether there exists a
+         certain route (or a better route) from point A to point B. More the consensus higher the trust and for example,
+         if a user actually makes that route from A to B, that helps create the proof of its existence. This is useful
+         for trusted and verifiable mapping / routing applications.
  \end{itemize}
 \subsection{Latitude Smart contract system:}
 
