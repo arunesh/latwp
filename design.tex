@@ -29,11 +29,12 @@ driven, route information, etc, (iv) multi-modal transport data such as biking, 
 Each of these data types have very special characteristics which the underlying datastore can be optimized for and allow
 for programming using what we call the {\em Latitude Smart Contract} framework. 
 
-The datastore would include spatial, quad-tree or r-tree based indexes for efficient querying and other operations that
+The datastore would include spatial, quad-tree or an R-tree based indexes for efficient querying and other operations that
 most Geographic Information Systems (GIS) would support in a centralized manner today. It would also include functions
 to compute heatmaps, driving maps and statistics such as Traffic predictions including real-time analytics. Depending on
 how Latitude evolves, the datastore can include additional functionalities to support the data sharing among autonomous
-vehicles since they use most of the similar datatypes mentioned above. 
+vehicles since they use most of the similar datatypes mentioned above. The datastore would support circular, rectangular
+and other range queries, K-nearest neighbor searches, route optimization algorithms, etc.
 
 Datastore
  - Optimized for Geographic, Geo-spatial data.
