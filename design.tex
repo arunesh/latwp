@@ -90,12 +90,12 @@ Cryptographic proofs for applications:
  - Cryptographic proofs can be shared among entities, safely, securely.
 
 \noindent
-{\textsf Cryptoeconomics and Governance:}
+\subsection{Cryptoeconomics and Governance:}
 Cryto-economics refers to the mechanics of the protocol underlying the blockchain operations which creates incentives
 for the various stakeholders. For example, in the Latitude Blockchain it is possible to reward users for sharing their data
 for certain purposes. For example, users can be rewarded if they share traffic data or accident information or better
 routes. This is similar to the Waze model but creates legitimate rewards for users that have meaningful value outside
-the Waze application. 
+the Waze application. For an overview of cryptoeconomics in the blockchain space, please see \cite{sinclair_crypto}.
 
 The core building block of the cryptoeconomics in Latitude is the Latitude Token, or LAT. This will be transacted in
 each and every micro-transaction that takes place on the blockchain to create the right incentives, enforce smart
@@ -108,6 +108,17 @@ Latitude shall employ a Proof of Stake model (delegated or non-delegted) for par
 gained popularity among a notable number of blockchains \cite{dpos_steemit}. This also allows for deposit slashing as a
 technique to tackle Byzantine behavior. Latitude will employ techniques such as Minimal Slashing \cite{buterin_slashing}
 for Byzantine fault tolerance and safety under distributed asynchronous operation.
+
+
+Governance refers to a decentralized manner in which decisions are made using a consensus mechanism on the blockchain.
+Decisions include basic constructs whether a node can join or leave the network. Or it can include key decisions on
+whether an upgrade should be mandated on every node, a given participant such as a data provider should be penalized. It
+could also include issues where humans get involved, such as when a user complains of a loss of privacy or a breach in
+contract.
+
+Recently blockchains have been moving towards governance using a small set of participants, such as trusted miners in
+the case of Stellar and Ripple \cite{stellar_gateways}. The EOS blockchain uses a similar concept of a core set of block
+producers. For discussion around Governance in Ethereum, refer to \cite{buterin_gov}.
 
  - Crypto-incentives for honest operation.
  - Penalties for malicious intent.
