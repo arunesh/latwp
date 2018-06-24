@@ -11,8 +11,8 @@ top. We shall make these determinations in the full-version of the whitepaper.
 The purpose of the Latitude blockchain is to become the best platform in the world for decentralized applications for
 the Transportation Industry. Specifically, this boils down to constructs in the blockchain that can handle spatial,
 mapping, traffic, driving data including data relating to other modalities of transport (bike sharing, walking, even air
-routes later on). Figure XXX presents the architecture of the Latitude blockchain in terms of the core technological
-innovations that will be built into it.
+routes later on). Figure \ref{fig:lat-arch} presents the architecture of the Latitude blockchain in terms of the core
+technological innovations that will be built into it.
 
 \begin{figure}[t]
     \centering
@@ -21,6 +21,7 @@ innovations that will be built into it.
     \label{fig:lat-arch}
 \end{figure}
 
+\subsection{Spatial datastore}
 One of the central aspects of the Latitude blockchain is a geo-spatial datastore that fundamentally understands various
 datatypes that are specific to transportation data. This datastore can use existing GIS databases that allow
 de-centralized storage and access. The types of data include (i) georaphic data such as location (latitude, longitude),
@@ -54,8 +55,7 @@ Datastore
  - Indexing road and driving data.
  - Primitives for storing driving data for autonomous vehicles
 
-\noindent
-{\textsf Strong crytographic foundation:}
+\subsection{Cryptographic primitives}
 Standard data encryption techniques allow for security guarantees in Latitude. Anonymity guarantees are provided using
 privacy-preserving set operations such as given in \cite{kissner_set}, with suitable modifications to
 anonymize spatial data which have user-location considerations \cite{divanis_kanon,xu_loc_anon}.
@@ -69,8 +69,30 @@ Cryptographic primitives for:
  - Ability to find bad actors.
  - Detect privacy, anonymity and security violations.
 
-\noindent
-{\textsf Latitude Smart contract system:}
+
+ The cryptographic system can provide various proofs that can be used by applications, users and other participants. The
+ proofs include the ones listed below but are not limited to these:
+ \begin{itemize}
+     \item Proof of location: This is perhaps the most easily motivated functionality that the Latitude blockchain can
+         provide. Proof of location is a cryptographic credential that proves that a given user, entity or participant
+         is physically present at a given location or a relative location to another participant. The proof of location
+         has been explored by other blockchains such as Platin \cite{platin}. Latitude shall provide the mobile, browser
+         and sensor SDKs that can directly tie into the datastore to provide consensus based proofs. These proofs can
+         unlock applications such as access to facilities or help increase trust in crowdsourced mapping, traffic and incident
+         reports.
+     \item Proof of ride: Provides a proof that a particular user has taken a ride from point A to point B using a
+         certain type of transport. This proof can be used across multi-modal ride platforms such as bike or car rides.
+         This can be later extended to include bus trips, flights, train rides and so on. The proof of ride is also
+         built using the same mobile SDK which can gather trust on the nature and parameters of the ride.
+     \item Proof of landmark (mapping): This proves the existence of a particular landmark, such as a monument, a
+         building, a sign post at a given lat/lng. This can also be used to prove the existence of a particular road or
+         the lack of. These proofs can be constructed using the proof of location and added consensus among users and
+         can form the backbone for verified mapping and landmark data.
+     \item Proof of driver score: 
+     \item Proof of traffic : 
+     \item Proof of routes : 
+ \end{itemize}
+\subsection{Latitude Smart contract system:}
 
 Smart contract system for Transportation applications.
  - Ability to convert “policies” such as GDPR into smart contract code.
