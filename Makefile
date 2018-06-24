@@ -1,6 +1,7 @@
 
 default:
 	pdflatex latitude.tex
+	bibtex latitude
 	pdflatex latitude.tex
 	evince latitude.pdf
 
