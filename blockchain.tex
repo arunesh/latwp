@@ -21,16 +21,39 @@ software.
 {\em Why is decentralization useful ?}
 \begin{itemize}
 
-    \item Fault tolerance— decentralized systems are less likely to fail accidentally because they rely on many separate
+    \item Fault tolerance - decentralized systems are less likely to fail accidentally because they rely on many separate
 components that are not likely.
-    \item Attack resistance— decentralized systems are more expensive to attack and destroy or manipulate because they lack
-sensitive central points that can be attacked at much lower cost than the economic size of the surrounding system.
-    \item Collusion resistance — it is much harder for participants in decentralized systems to collude to act in ways that
+    \item Attack resistance - decentralized systems are more expensive to attack and destroy or manipulate because they lack
+sensitive central points that can be attacked at much lower cost than the economic size of the surrounding system. This
+can be important for transportation data as it does not remain under a single point of failure.
+    \item Collusion resistance:it is much harder for participants in decentralized systems to collude to act in ways that
 benefit them at the expense of other participants, whereas the leaderships of corporations and governments collude in
 ways that benefit themselves but harm less well-coordinated citizens, customers, employees and the general public all
 the time.
-
 \end{itemize}
+
+One of the key concepts of blockchains becoming an application platform is smart contracts. A standard contract, as a
+legal document, binds two or more parties into an obligation to achieve certain deliverables or outcomes. A smart
+contract is a piece of code that similarly binds multiple parties into outcomes that are verifiable, computable or
+provable using code and strong cryptographic constructs. Ethereum was the first such platform to introduce the concept
+of smart contracts which has since been adopted by most other blockchains that wish to host decentralized applications
+(dapps).
+
+Because smart contracts can be executed by arbitrary nodes on the blockchain, its possible for anyone to "verify" the
+smart contract. This createst the concept of trust using consensus. Consensus is defined as the agreement among a
+certain number (or fraction) of nodes on a particular result or outcome. With consensus, it becomes much harder for a
+Byzantine or adversarial node \cite{lamport_byz} to manipulate the smart contract in ways that was not intended or
+provisioned for. One of our goals, as discussed later in Section \ref{sec:design} is to build a smart contract framework
+that is tailored for Transportation applications, so that the contracts are readily available, trustable and
+enforceable. 
+
+Smart contracts can allow new ways of data sharing that were not possible before. By creating strong programmatic
+constructs combined with consensus protocols and cryptographic primitives it is possible to share data in a way that
+privacy, security and restrictions on use can be enforced. There has been a lot of recent progress on how to use Smart
+Contracts for data sharing \cite{liu_2018}. Thus, the technology today is ready for creating disruptive new ways of
+sharing transportation data to create new applications such as smart cities, driver behavior, insurance, mapping etc.
+This technology can be disruptive to incumbents who might be late for adoption.
+
 - Concepts of smart contract, trust, consensus.
 
 - How data sharing can work in a blockchain manner. 

@@ -1,6 +1,7 @@
 
 default:
 	pdflatex latitude.tex
+	pdflatex latitude.tex
 	evince latitude.pdf
 
 clean:
