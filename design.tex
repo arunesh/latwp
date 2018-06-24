@@ -6,7 +6,7 @@ the rest of the design for the Latitude Blockchain. Its important to note here t
 might be possible to use an existing core blockchain for the underlying functionalities and build Latitude as a layer on
 top. We shall make these determinations in the full-version of the whitepaper.
 
-\subsection{Overview of design principles}
+\subsection{Design overview}
 
 The purpose of the Latitude blockchain is to become the best platform in the world for decentralized applications for
 the Transportation Industry. Specifically, this boils down to constructs in the blockchain that can handle spatial,
@@ -54,6 +54,11 @@ Datastore
  - Indexing road and driving data.
  - Primitives for storing driving data for autonomous vehicles
 
+\noindent
+{\textsf Strong crytographic foundation:}
+Standard data encryption techniques allow for security guarantees in Latitude. Anonymity guarantees are provided using
+privacy-preserving set operations such as given in \cite{kissner_set}, with suitable modifications to
+anonymize spatial data which have user-location considerations \cite{divanis_kanon,xu_loc_anon}.
 Cryptographic primitives for:
  - Security and privacy of data.
  - Anonymity guarantees using cryptographic set operations.
@@ -64,6 +69,8 @@ Cryptographic primitives for:
  - Ability to find bad actors.
  - Detect privacy, anonymity and security violations.
 
+\noindent
+{\textsf Latitude Smart contract system:}
 
 Smart contract system for Transportation applications.
  - Ability to convert “policies” such as GDPR into smart contract code.
@@ -82,8 +89,8 @@ Cryptographic proofs for applications:
  - Open, trusted, understood driver score computation algorithms.
  - Cryptographic proofs can be shared among entities, safely, securely.
 
-
-Cryptoeconomics and Governance:
+\noindent
+{\textsf Cryptoeconomics and Governance:}
  - Crypto-incentives for honest operation.
  - Penalties for malicious intent.
  - Governance based on consensus and roles using a council.
@@ -99,9 +106,8 @@ User incentives:
    - Can be detected using a combination of consensus and incentives.
    - Best interest of users to act honestly by design.
 
-\subsection{Blockchain Architecture}
 
-
-
+\noindent
+{\textsf Performance considerations:}
 Performance:
 - Transaction speed. Data throughput. Storage capabilities.
