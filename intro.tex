@@ -1,25 +1,35 @@
 \section{Introduction}\label{sec:intro}
 
-- There is a fundamental shift happening in the transportation industry. Automation, data, AI based analytics.
+There is a fundamental shift happening in the transportation industry due to the availabilty of data and resulting
+applications in ways that was not possible before. For instance, due to the proliferation of mobile phones and real-time
+location data, it became possible to disrupt the traditional taxi-based transportation market using Ridesharing
+applications. Similar trend in real-time traffic and incident data collected in a crowdsourced manner has led to apps
+like Waze which have improved our daily commute life. Using data-sharing it also became possible to build apps that can
+do multi-modal ride computations (bike, scooters, etc).
 
-{\em Why Data sharing ?}
+\noindent
+{\textsf Benefits of Data sharing:}
 
-Big data has become the fuel for Decision making, product evolution, AI applications, including the use of Deep Learning
-and other techniques. But data typically lives in silos owned by products, companies or Governments since data sharing
-is rife with problems. Users want control over their data and wish to make sure advertisers are not abusing it.
-Regulators want to make sure policies are implemented correctly. Now, imagine if these hurdles can be taken care of
-using the right technology, would data sharing enable new and disruptive applications ? The possibility of enabling data
-sharing using blockchain technology with cryptographically protected sharing methods has the potential to change the
-sharing economy.  Projects such as the Origin Protocol, Uchain among others are building platforms that empowers
-developers and businesses to create their own decentralized marketplaces for sharing data in accordance with strict
-controls on the blockchain. Such Blockchain based approaches make it quick and easy for organizations to develop and
-manage listings for assets and services
+%Big data has become the fuel for Decision making, product evolution, AI applications, including the use of Deep Learning
+%and other techniques.
 
-For the Transportation Industry, data sharing
-can help solve some critical problems.  For example, cities can share the data they collected about transport patterns
-with different stake holders such as transportation companies to reduce the traffic jams during rush hour
-\cite{traffic_jam}. First responders and aid workers share data between them to better coordinate disaster relief
-efforts \cite{bharosa_2010}.
+Users of these apps are providing a staggering amount of data. However, due to centralization, this data is subject to
+policies, security and privacy practices that are not in the user's control. Morever, its not possible for regulators or
+city governments to use this data for benefit of their citizens. The recent breaches in data usage, security and privacy
+have shown that users want control over who is using their data and how. This includes how advertisers are using their
+data, for example. Also, regulators want to make sure policies are implemented correctly.
+
+Now, imagine if these hurdles can be taken care of using the right technology, would data sharing enable new and
+disruptive applications ? The possibility of enabling data sharing using blockchain technology with cryptographically
+protected sharing methods has the potential to change the sharing economy.
+
+We present Latitude which is designed to be the best blockchain for the Transportation industry. Latitude allows the
+development of decentralized apps using smart contracts powered by a geo-spatial datastore. This is built off strong
+cryptographic proofs and primitives that provide security, privacy and anonymity guarantees.  For the Transportation
+Industry, such data sharing can help solve some critical problems.  For example, cities can share the data they
+collected about transport patterns with different stake holders such as transportation companies to reduce the traffic
+jams during rush hour \cite{traffic_jam}. First responders and aid workers share data between them to better coordinate
+disaster relief efforts \cite{bharosa_2010}.
 
 - Centralized solution examples:
     - Telematics data exchanges.
@@ -31,7 +41,8 @@ manner.
 - The industry needs a solution that can allow new ways of sharing the data while providing strong unbreakable gurantees
 of security privacy etc.
 
-{\em What are blockchains ?}
+\noindent
+{\textsf What are blockchains:}
 Blockchain is a public register in which transactions between two users belonging to the same network are stored in a secure, verifiable
 and permanent way. The data relating to the exchanges are saved inside cryptographic blocks, connected in a hierarchical
 manner to each other. This creates an endless chain of data blocks -- hence the name blockchain -- that allows you to
@@ -42,6 +53,21 @@ executing arbitrary applications called dapps using smart contracts and a wide r
 there has been an explosion in blockchain technology to allow a wide range of distributed decentralized applications to
 run over a network of untrusted arbitrary nodes over the planet, which almost mimic the structure and spread of the
 Internet.
+
+\noindent
+{\textsf Related projects:}
+Projects such as the Origin Protocol, Uchain among others are building platforms that empowers developers and businesses
+to create their own decentralized marketplaces for sharing data in accordance with strict controls on the blockchain.
+Such Blockchain based approaches make it quick and easy for organizations to develop and manage listings for assets and
+services. Similar data sharing can yield benefits in the Internet of Things (IoT) landscape. Projects such as the IoTex
+blockchain are building solutions to collect, store and share data from IOT sensors, protected with a smart contract
+system.
+
+The rest of this whitepaper is organized as follows. In the next Section, we discuss why Blockchains are the proper
+technology to disrupt the Transportation industry. In Section \ref{sec:design}, we present the design of the Latitude
+blockchain, including the core building blocks that make it work well for applications in the transportation industry.
+In Section \ref{sec:apps}, we discuss details of four different classes of applications that can be built on Latitude
+and how third-party companies can build decentralized applications to disrupt the incumbents.
 
 - Overview of our solution:
   - Blockchains can provide these gurantees and much more. 
@@ -80,5 +106,3 @@ With this increase in scope, single monolithic ``blockchain'' technologies are b
  \item Decentralized processing (``smart contracts'') and decentralized storage (file systems, databases), and decentralized communication
  \item Cryptographic primitives, consensus protocols, and other algorithms
 \end{enumerate}
-
-
