@@ -1,25 +1,23 @@
-\section{The Latitude Blockchain}\label{sec:design}
-
-In this section, we present a high-level design of the Latitude blockchain. The full-version of this whitepaper shall
-contain a very detailed design of each component. We start with an overview of the key design principles that will guide
-the rest of the design for the Latitude Blockchain. Its important to note here that for implementation purposes, it
-might be possible to use an existing core blockchain for the underlying functionalities and build Latitude as a layer on
-top. We shall make these determinations in the full-version of the whitepaper.
-
-\subsection{Design overview}
-
-The purpose of the Latitude blockchain is to become the best platform in the world for decentralized applications for
-the Transportation Industry. Specifically, this boils down to constructs in the blockchain that can handle spatial,
-mapping, traffic, driving data including data relating to other modalities of transport (bike sharing, walking, even air
-routes later on). Figure \ref{fig:lat-arch} presents the architecture of the Latitude blockchain in terms of the core
-technological innovations that will be built into it.
-
 \begin{figure}[t]
     \centering
     \includegraphics[width=1.00\textwidth]{latarch.png}
   \caption{Architecture of the Latitude Blockchain and associated platform ecosystem.}
     \label{fig:lat-arch}
 \end{figure}
+
+\section{The Latitude Blockchain}\label{sec:design}
+
+In this Section, we present a high-level design of the Latitude blockchain. The full-version of this whitepaper shall
+contain a very detailed design of each component. We start with an overview of the key design principles that will guide
+the rest of the design for the Latitude Blockchain. Its important to note here that for implementation purposes, it
+might be possible to use an existing core blockchain for the underlying functionalities and build Latitude as a layer on
+top. We shall make these determinations in the full-version of the whitepaper.
+
+The purpose of the Latitude blockchain is to become the best platform in the world for decentralized applications for
+the Transportation Industry. Specifically, this boils down to constructs in the blockchain that can handle spatial,
+mapping, traffic, driving data including data relating to other modalities of transport (bike sharing, walking, even air
+routes later on). Figure \ref{fig:lat-arch} presents the architecture of the Latitude blockchain in terms of the core
+technological innovations that will be built into it.
 
 \subsection{Spatial datastore}
 One of the central aspects of the Latitude blockchain is a geo-spatial datastore that fundamentally understands various
@@ -166,7 +164,7 @@ As showsn in Figure \ref{fig:lat-sc}, the smart contract code has access to the 
 (including algorithms to create proofs), an algorithm library (which hosts algorithms such as traffic, driver score
 etc). These are directly accessible through language constructs making it easy to write high quality smart contract
 code. The smart contract execution framework and related functionalities are accessible to dapps, entities such as
-users, governments and the Latitude Council (discussed later in the Governance section) on the system. 
+users, governments and the Latitude Council (discussed later in the Governance Section) on the system. 
 
 The Latitude smart contract system can becomes the world's first such smart contract framework specifically tailored for
 transportation data and applications.
@@ -243,19 +241,18 @@ centralized providers, the platform owners determine the fees, percentages and a
 practices and policies which cannot be verified. They often become accused of predatory behavior. Using blockchain based
 incentives, sharing and open-source software these problems can be addressed in a singular fashion.
 
-As an exmaple, consider the Ridesharing application. As users contribute data on what rides they are taking, it becomes
+As an example, consider the Ridesharing application. As users contribute data on what rides they are taking, it becomes
 possible for the network to reward them with tokens. They could, upon sufficient contribution, redeem them for free
 rides or share with them others on the network. A similar model can be adopted for data concerning driver behavior where
 drivers using different apps and sensor algorithms can elect to share their data towards building a better driver score
 in return for suitable incentives.
 
-User incentives:
- - Users have full control over their data and computation.
- - Users can issue or request proofs to carry over to other applications.
- - User’s have incentive to share data, participate in improving the common denominator.
- - Malicious intent, Byzantine behavior.
-   - Can be detected using a combination of consensus and incentives.
-   - Best interest of users to act honestly by design.
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.90\textwidth]{tps_speed2.png}
+  \caption{Comparison of transactions per second of the major blockchains today.}
+    \label{fig:tps_speed}
+\end{figure}
 
 \subsection{Performance considerations}
 When thinking of performance, one of the key metrics that is hotly debated in the community is transactions per second.
@@ -265,13 +262,6 @@ this cricial metric. Note that these blockchains shown in the Figure are primari
 transaction which represents a transfer of assets, goods or monetary value digitally on the blockchain. Stellar and
 Ripple are two blockchains that have gained popularity for financial transactions as they tout a higher transcation
 velocity. 
-
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.90\textwidth]{tps_speed2.png}
-  \caption{Comparison of transactions per second of the major blockchains today.}
-    \label{fig:tps_speed}
-\end{figure}
 
 In the context of Latitude, the performance of the blockchain is important. The blockchain will handle different types
 of data and transactions which will require different levels of consensus and trust. Figure \cite{fig:tps_lat} shows the
