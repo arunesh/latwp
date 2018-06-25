@@ -5,25 +5,28 @@ applications in ways that was not possible before. For instance, due to the prol
 location data, it became possible to disrupt the traditional taxi-based transportation market using Ridesharing
 applications. Similar trend in real-time traffic and incident data collected in a crowdsourced manner has led to apps
 like Waze which have improved our daily commute life. Using data-sharing it also became possible to build apps that can
-do multi-modal ride computations (bike, scooters, etc).
+do multi-modal ride computations (bike, scooters, etc). Smart cities are able to use transportation data for
+urban planning, zoning and development use cases. Insurance companies are able to provide per-mile insurance using
+driver behavior determined by data from sensors.
 
-\noindent
-{\textsf Benefits of Data sharing:}
+\subsection{Benefits of Data sharing}
 
 %Big data has become the fuel for Decision making, product evolution, AI applications, including the use of Deep Learning
 %and other techniques.
 
-Users of these apps are providing a staggering amount of data. However, due to centralization, this data is subject to
-policies, security and privacy practices that are not in the user's control. Morever, its not possible for regulators or
-city governments to use this data for benefit of their citizens. The recent breaches in data usage, security and privacy
-have shown that users want control over who is using their data and how. This includes how advertisers are using their
-data, for example. Also, regulators want to make sure policies are implemented correctly.
+Users of these applications are providing a staggering amount of data. However, due to centralization this data is
+subject to policies, security and privacy practices that are not in the user's control. Morever, its not possible for
+regulators or city governments to use this data for benefit of their citizens. Centralization creates data silos which
+dramatically reduce the utility of the technology. The recent breaches in data usage, security and privacy have shown
+that users want control over who is using their data and how. This includes how advertisers are using their data, for
+example. Also, regulators want to make sure policies are implemented correctly but have no programmatic way of doing so.
 
 Now, imagine if these hurdles can be taken care of using the right technology, would data sharing enable new and
-disruptive applications ? The possibility of enabling data sharing using blockchain technology with cryptographically
-protected sharing methods has the potential to change the sharing economy.
+disruptive applications ? Lately, Blockchain technology has emerged as a way for creating decentralized data-based
+applications in a secure, privacy-aware, verifiable and trusted manner. The possibility of enabling data sharing using
+blockchain technology with cryptographically protected sharing methods has the potential to change the sharing economy.
 
-We present Latitude which is designed to be the best blockchain for the Transportation industry. Latitude allows the
+We present Latitude, which is designed to be the best blockchain for the Transportation industry. Latitude allows the
 development of decentralized apps using smart contracts powered by a geo-spatial datastore. This is built off strong
 cryptographic proofs and primitives that provide security, privacy and anonymity guarantees.  For the Transportation
 Industry, such data sharing can help solve some critical problems.  For example, cities can share the data they
@@ -31,31 +34,41 @@ collected about transport patterns with different stake holders such as transpor
 jams during rush hour \cite{traffic_jam}. First responders and aid workers share data between them to better coordinate
 disaster relief efforts \cite{bharosa_2010}.
 
-- Centralized solution examples:
-    - Telematics data exchanges.
-    - Mapping and location data: privacy security issues. Lack of user control.
-    - Centralization creates DATA SILOS. Explain and expand.
-- What powers this is data, being able to share data, analytics, computation using AI, in a trustworthy privacy-aware
-manner.
+For the common user, Latitude can help build decentralized apps that can provide incentives to both drivers and users
+for sharing their data. T
+%
+%- Centralized solution examples:
+%    - Telematics data exchanges.
+%    - Mapping and location data: privacy security issues. Lack of user control.
+%    - Centralization creates DATA SILOS. Explain and expand.
+%- What powers this is data, being able to share data, analytics, computation using AI, in a trustworthy privacy-aware
+%manner.
+%
+%- The industry needs a solution that can allow new ways of sharing the data while providing strong unbreakable gurantees
+%of security privacy etc.
 
-- The industry needs a solution that can allow new ways of sharing the data while providing strong unbreakable gurantees
-of security privacy etc.
-
-\noindent
-{\textsf What are blockchains:}
+\subsection{What are blockchains}
 Blockchain is a public register in which transactions between two users belonging to the same network are stored in a secure, verifiable
 and permanent way. The data relating to the exchanges are saved inside cryptographic blocks, connected in a hierarchical
 manner to each other. This creates an endless chain of data blocks -- hence the name blockchain -- that allows you to
 trace and verify all the transactions you have ever made.
 
-Bitcoin was the first such blockchain to introduce this concept, but Ethereum has made this a general platform for
-executing arbitrary applications called dapps using smart contracts and a wide range of other tools. Since Ethereum,
-there has been an explosion in blockchain technology to allow a wide range of distributed decentralized applications to
-run over a network of untrusted arbitrary nodes over the planet, which almost mimic the structure and spread of the
-Internet.
+The introduction of Bitcoin \cite{nakamoto2009bitcoin} triggered a new wave of decentralization in computing.
+Bitcoin illustrated a novel set of benefits: decentralized control, where ``no one'' owns or controls the network;
+immutability, where written data is tamper-resistant (``forever''); and the ability to create \& transfer assets on the
+network, without reliance on a central entity.
 
-\noindent
-{\textsf Related projects:}
+The initial excitement surrounding Bitcoin stemmed from its use as a token of value, for example as an alternative to
+government-issued currencies.  As people learned more about the underlying blockchain technology, they extended the
+scope of the technology itself (e.g. smart contracts), as well as applications (e.g. intellectual property).
+
+Bitcoin was the first such blockchain to introduce concept of full decentralization, but Ethereum has made this a
+general platform for executing arbitrary applications called dapps using smart contracts and a wide range of other
+tools. Since Ethereum, there has been an explosion in blockchain technology to allow a wide range of distributed
+decentralized applications to run over a network of untrusted arbitrary nodes over the planet, which almost mimic the
+structure and spread of the Internet.
+
+\subsection{Related projects:}
 Projects such as the Origin Protocol, Uchain among others are building platforms that empowers developers and businesses
 to create their own decentralized marketplaces for sharing data in accordance with strict controls on the blockchain.
 Such Blockchain based approaches make it quick and easy for organizations to develop and manage listings for assets and
@@ -69,35 +82,33 @@ blockchain, including the core building blocks that make it work well for applic
 In Section \ref{sec:apps}, we discuss details of four different classes of applications that can be built on Latitude
 and how third-party companies can build decentralized applications to disrupt the incumbents.
 
-- Overview of our solution:
-  - Blockchains can provide these gurantees and much more. 
-  - Examples of other industries where blockchain is posed to disrupt traditional data sharing:
-    - IOT example.
-    - Supply chain management.
-    - Renting.
-  - Section level overview.
+
+%We are in the midst of building a new Internet. Blockchain networks like Ethereum have popularized the idea of
+%unstoppable, owner less applications that are run on an open network of untrusted but incentivized nodes without the
+%oversight of a central authority. An increasing number of these decentralized applications (\DJ apps) are being created
+%everyday with evolving data storage needs. The first generation of these dapps stored their data entirely on a
+%blockchain itself while the current ones are storing it on decentralized file storage systems like IPFS with just hashes
+%of the data stored on the blockchain. Although this method works for dapps with simple storage needs like the need for
+%storing data as a blob, it is very limiting for dapps with more complex requirements such as the need to store data at a
+%more fine grained level and efficiently querying it. A popular option is then to use a cloud hosted database (ex:
+%Google’s Cloud SQL) but that turns a dapp into a non-dapp by introducing centrality into the system. \newline\newline
+%
+
+Rest of the paper is structured as follows: in section 2, we discuss some related work. Section 3 presents the overall
+design of the system, section 4 presents the network subsystem, section 5 presents the database subsystem and section 6
+presents our approach to dealing with problems that arise in a network made up of untrusted nodes and discusses an
+incentive mechanism to make them behave as per system's needs. In section 7, we propose a message exchange protocol in
+the same vein as http but for relational data sharing. Section 8 concludes the paper.
 
 
+The introduction of Bitcoin \cite{nakamoto2009bitcoin} has triggered a new wave of decentralization in computing.
+Bitcoin illustrated a novel set of benefits: decentralized control, where ``no one'' owns or controls the network;
+immutability, where written data is tamper-resistant (``forever''); and the ability to create \& transfer assets on the
+network, without reliance on a central entity.
 
-We are in the midst of building a new Internet. Blockchain networks like Ethereum have popularized the idea of
-unstoppable, owner less applications that are run on an open network of untrusted but incentivized nodes without the
-oversight of a central authority. An increasing number of these decentralized applications (\DJ apps) are being created
-everyday with evolving data storage needs. The first generation of these dapps stored their data entirely on a
-blockchain itself while the current ones are storing it on decentralized file storage systems like IPFS with just hashes
-of the data stored on the blockchain. Although this method works for dapps with simple storage needs like the need for
-storing data as a blob, it is very limiting for dapps with more complex requirements such as the need to store data at a
-more fine grained level and efficiently querying it. A popular option is then to use a cloud hosted database (ex:
-Google’s Cloud SQL) but that turns a dapp into a non-dapp by introducing centrality into the system. \newline\newline
-
-Rest of the paper is structured as follows: in section 2, we discuss some related work. Section 3 presents the overall design of the system, section 4 presents the network subsystem, section 5 presents the database subsystem and section 6 presents our approach to dealing with problems that arise in a network made up of untrusted nodes and discusses an incentive mechanism to make them behave as per system's needs. In section 7, we propose a message exchange protocol in the same vein as http but for relational data sharing. Section 8 concludes the paper.
-
-
-The introduction of Bitcoin \cite{nakamoto2009bitcoin} has triggered a new wave of decentralization in computing. 
-Bitcoin illustrated a novel set of benefits: decentralized control, where ``no one'' owns or controls the network; immutability,
-where written data is tamper-resistant (``forever''); and the ability to create \& transfer assets on the network, without reliance on a central entity.
-
-The initial excitement surrounding Bitcoin stemmed from its use as a token of value, for example as an alternative to government-issued currencies.
-As people learned more about the underlying blockchain technology, they extended the scope of the technology itself (e.g. smart contracts), as well as applications (e.g. intellectual property).
+The initial excitement surrounding Bitcoin stemmed from its use as a token of value, for example as an alternative to
+government-issued currencies.  As people learned more about the underlying blockchain technology, they extended the
+scope of the technology itself (e.g. smart contracts), as well as applications (e.g. intellectual property).
 
 With this increase in scope, single monolithic ``blockchain'' technologies are being re-framed and refactored into building blocks at four levels of the stack:
 \begin{enumerate}
