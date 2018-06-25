@@ -22,7 +22,7 @@ technological innovations that will be built into it.
 \subsection{Spatial datastore}
 One of the central aspects of the Latitude blockchain is a geo-spatial datastore that fundamentally understands various
 datatypes that are specific to transportation data. This datastore can use existing GIS databases that allow
-de-centralized storage and access. The types of data include (i) georaphic data such as location (latitude, longitude),
+de-centralized storage and access. The types of data include (i) geographic data such as location (latitude, longitude),
 (ii) mapping data such as roads, terrain, addresses, etc, (iii) sensor data such as driving data, driver score, miles
 driven, route information, etc, (iv) multi-modal transport data such as biking, walking and other means of transport.
 Each of these data types have very special characteristics which the underlying datastore can be optimized for and allow
@@ -39,7 +39,7 @@ and other range queries, K-nearest neighbor searches, route optimization algorit
 \begin{figure}[t]
     \centering
     \includegraphics[width=0.70\textwidth]{geospatial_query.png}
-  \caption{Examples of Geo-spatial queries that a spatial datastructure can support on the Latitude blockchain.}
+  \caption{Examples of Geo-spatial queries that a spatial data-structure can support on the Latitude blockchain.}
     \label{fig:geo_spatial_query}
 \end{figure}
 
@@ -55,7 +55,7 @@ and other range queries, K-nearest neighbor searches, route optimization algorit
 \subsection{Cryptographic primitives}
 \label{sec:crypto}
 Latitude makes use of strong cryptographic protocols, primitives, encryptions, secure hash function, certificates,
-multi-party key distribution, proxy key reencryption, Elliptic-curve based Digital Signatures \cite{ecdsa} and other
+multi-party key distribution, proxy key re-encryption, Elliptic-curve based Digital Signatures \cite{ecdsa} and other
 state-of-the-art mechanisms to provide strong security, privacy, access control, confidentiality and anonymity
 guarantees. Specifically for geo-spatial data such as location, anonymity guarantees can be very important part of data
 sharing smart contracts and privacy policies such as GDPR \cite{gdpr}. Latitude provides anonymity guarantees using
@@ -92,7 +92,7 @@ happen on the network. These techniques are similar to the ones used by some of 
 
 
 In addition to these standard primitives discussed above, Latitude provides a host of other proofs that are tailor made
-for geo-spatial, mapping, location and sensor data for driving. Thes proofs that can be used by applications, users and
+for geo-spatial, mapping, location and sensor data for driving. These proofs that can be used by applications, users and
 other participants in the network. The network can be extended to create new forms of proofs as the application needs
 grow. The proofs include the ones listed below but are not limited to these:
 
@@ -102,7 +102,7 @@ grow. The proofs include the ones listed below but are not limited to these:
          is physically present at a given location or a relative location to another participant. The proof of location
          has been explored by other blockchains such as Platin \cite{platin}. Latitude shall provide the mobile, browser
          and sensor SDKs that can directly tie into the datastore to provide consensus based proofs. These proofs can
-         unlock applications such as access to facilities or help increase trust in crowdsourced mapping, traffic and incident
+         unlock applications such as access to facilities or help increase trust in crowd-sourced mapping, traffic and incident
          reports.
      \item Proof of ride: Provides a proof that a particular user has taken a ride from point A to point B using a
          certain type of transport. This proof can be used across multi-modal ride platforms such as bike or car rides.
@@ -114,7 +114,7 @@ grow. The proofs include the ones listed below but are not limited to these:
          can form the backbone for verified mapping and landmark data.
      \item Proof of driver score: This proof can be computed on the blockchain over the data aggregated on the
          datastore. The algorithm itself shall be made available to the nodes either as an executable docker image or an
-         opensource version. This allows different nodes to run the computation and create a certificate of a certain
+         open-source version. This allows different nodes to run the computation and create a certificate of a certain
          driver score which can then be attributed to the driver or user. This open framework can also allow different
          driver score algorithms to co-exist in the system creating a community where better driver score algorithms can
          be agreed upon and used as the industry standard.
@@ -156,11 +156,11 @@ creating contract code, developer support and talent pool. Latitude shall add en
 new spatial data types, indexes, cryptographic proofs and other mechanisms that are fundamental to the platform. Some of
 the goals of the smart contract system include the ability to convert data policies such as GDPR \cite{gdpr} into
 Latitude smart contract code which can then get automatically verified and enforced on the blockchain.  Also its
-possible to share location data in an emphemeral manner for a specific purpose -- the data item gets automatically
+possible to share location data in an ephemeral manner for a specific purpose -- the data item gets automatically
 destroyed using consensus and smart contract constructs on the blockchain. An example includes a user sharing their
 location with an app for a very small duration of time.
 
-As showsn in Figure \ref{fig:lat-sc}, the smart contract code has access to the datastore, cryptographic proofs
+As shown in Figure \ref{fig:lat-sc}, the smart contract code has access to the datastore, cryptographic proofs
 (including algorithms to create proofs), an algorithm library (which hosts algorithms such as traffic, driver score
 etc). These are directly accessible through language constructs making it easy to write high quality smart contract
 code. The smart contract execution framework and related functionalities are accessible to dapps, entities such as
@@ -179,21 +179,21 @@ making structure. These discussions go hand-in-hand as they specify how the bloc
 decentralized manner in the real world.
 
 \noindent
-{\bf Crytpoeconomics}
-Crytoeconomics refers to the mechanics of the protocol underlying the blockchain operations which creates incentives
-for the various stakeholders. For example, in the Latitude Blockchain it is possible to reward users for sharing their data
+{\bf Cryptoeconomics}
+Cryptoeconomics refers to the mechanics of the protocol underlying the blockchain operations which creates incentives
+for the various stake-holders. For example, in the Latitude Blockchain it is possible to reward users for sharing their data
 for certain purposes. For example, users can be rewarded if they share traffic data or accident information or better
 routes. This is similar to the Waze model but creates legitimate rewards for users that have meaningful value outside
-the Waze application. For an overview of cryptoeconomics in the blockchain space, please see \cite{sinclair_crypto}.
+the Waze application. For an overview of Cryptoeconomics in the blockchain space, please see \cite{sinclair_crypto}.
 
-The core building block of the cryptoeconomics in Latitude is the Latitude Token, or LAT. This will be transacted in
+The core building block of the Cryptoeconomics in Latitude is the Latitude Token, or LAT. This will be transacted in
 each and every micro-transaction that takes place on the blockchain to create the right incentives, enforce smart
 contracts and penalize Byzantine behavior. One of the fundamental design principles behind the protocol for the LAT
 token is to create incentives assuming nodes are greedy and are interested in maximizing their gain. We will also build
 safeguards against reasonable amount of collusion among nodes to subvert the system. The design is crafted such that the
 best way for a node to maximize its revenue would be to participate with full honesty.
 
-Latitude shall employ a Proof of Stake model (delegated or non-delegted) for particpation and core node-level mining. This mechanism has recently
+Latitude shall employ a Proof of Stake model (delegated or non-delegated) for participation and core node-level mining. This mechanism has recently
 gained popularity among a notable number of blockchains \cite{dpos_steemit}. This also allows for deposit slashing as a
 technique to tackle Byzantine behavior. Latitude will employ techniques such as Minimal Slashing \cite{buterin_slashing}
 for Byzantine fault tolerance and safety under distributed asynchronous operation.
@@ -258,9 +258,9 @@ in return for suitable incentives.
 When thinking of performance, one of the key metrics that is hotly debated in the community is transactions per second.
 Bitcoin is know for its long time to produce a block, on the order of minutes which limits the number of transactions
 the network can process. Figure \ref{fig:tps_speed} shows a comparison of the major blockchains today with respect to
-this cricial metric. Note that these blockchains shown in the Figure are primarily evaluated against the concept of a
+this crucial metric. Note that these blockchains shown in the Figure are primarily evaluated against the concept of a
 transaction which represents a transfer of assets, goods or monetary value digitally on the blockchain. Stellar and
-Ripple are two blockchains that have gained popularity for financial transactions as they tout a higher transcation
+Ripple are two blockchains that have gained popularity for financial transactions as they tout a higher transaction
 velocity. 
 
 In the context of Latitude, the performance of the blockchain is important. The blockchain will handle different types
@@ -270,7 +270,7 @@ are four types of transactions:
 \begin{itemize}
     \item Datastore transactions: These refer to basic transactions to store data values into the geo-spatial data
         store. For instance, if a user shares their driving data, this can include the sensor information, lat/lng of
-        the trip taken and any mapping data collected. For ridesharing applications, this can include any multi-model
+        the trip taken and any mapping data collected. For ride-sharing applications, this can include any multi-model
         ride details that the user has booked. We expect the blockchain to be able to process close to 1-10 million
         transactions per second, since most such transactions require very low level of consensus and can tolerate 
         eventual consistency \cite{eventual_con}.
@@ -278,13 +278,13 @@ are four types of transactions:
         blockchain. For instance, this could include the computation of various driver behavior algorithms with the
         computation being shared among certain participants on the network. Another computation could include statistics
         such as real-time traffic or aggregate traffic statistics shared with a city for better zoning and planning
-        purposes. The amount of consensus required is relativel small but higher than datastore operations in order to
+        purposes. The amount of consensus required is relatively small but higher than datastore operations in order to
         ensure correct execution of algorithms and lack of malicious intent. Also such operations would require strong
-        consistency for their CRUD funtionalities. We expect the Latitude design to support 10-100K transactions per
+        consistency for their CRUD functionalities. We expect the Latitude design to support 10-100K transactions per
         second at its peak usage.
     \item Data sharing contracts: These transactions refer to the creation, deletion or arbitration of long-term sharing
         smart contracts between participating entities. For instance, it could include a new contract between an
-        insurance company and a data provider for sharing certaint types of driver score data for certain geographic
+        insurance company and a data provider for sharing certain types of driver score data for certain geographic
         locations. Since these transactions have higher value they require larger amount of trust and consensus in the
         system. Latitude shall support a transaction speed of around 100-1000 transactions per second for this category.
     \item Governance operations: The Governance operations require the highest amount of trust and full consensus of the
@@ -297,10 +297,10 @@ are four types of transactions:
 
 Another metric of importance for Latitude is the storage capacity in the network. This can be important for
 datastore operations. We expect the storage capacity, network bandwidth and any other computing resource to become
-available on an incentived model as determined by usage contracts. For instance, if a user is willing to share data with
+available on an incentivized model as determined by usage contracts. For instance, if a user is willing to share data with
 a data consumer, the consumer should be able to allocate token resources to provision the network with sufficient
 storage. The token can be used to purchase storage using other blockchain storage providers such as Filecoin, Siacoin or
-Golem can be used to incentivize nodes to directly supplant on-chain storage.
+Golem can be used to incentivized nodes to directly supplant on-chain storage.
 
 \begin{figure}[t]
     \centering
