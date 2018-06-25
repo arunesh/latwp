@@ -1,3 +1,4 @@
+\noindent
 \section{The Latitude Blockchain}\label{sec:design}
 
 In this section, we present a high-level design of the Latitude blockchain. The full-version of this whitepaper shall
@@ -6,6 +7,7 @@ the rest of the design for the Latitude Blockchain. Its important to note here t
 might be possible to use an existing core blockchain for the underlying functionalities and build Latitude as a layer on
 top. We shall make these determinations in the full-version of the whitepaper.
 
+\noindent
 \subsection{Design overview}
 
 The purpose of the Latitude blockchain is to become the best platform in the world for decentralized applications for
@@ -21,6 +23,7 @@ technological innovations that will be built into it.
     \label{fig:lat-arch}
 \end{figure}
 
+\noindent
 \subsection{Spatial datastore}
 One of the central aspects of the Latitude blockchain is a geo-spatial datastore that fundamentally understands various
 datatypes that are specific to transportation data. This datastore can use existing GIS databases that allow
@@ -55,6 +58,7 @@ and other range queries, K-nearest neighbor searches, route optimization algorit
 % - Indexing road and driving data.
 % - Primitives for storing driving data for autonomous vehicles
 
+\noindent
 \subsection{Cryptographic primitives}
 \label{sec:crypto}
 Latitude makes use of strong cryptographic protocols, primitives, encryptions, secure hash function, certificates,
@@ -130,6 +134,8 @@ grow. The proofs include the ones listed below but are not limited to these:
          if a user actually makes that route from A to B, that helps create the proof of its existence. This is useful
          for trusted and verifiable mapping / routing applications.
  \end{itemize}
+
+\noindent
 \subsection{Latitude Smart contract system}
 
 \begin{figure}[t]
@@ -184,6 +190,7 @@ Crytpeconomics and governance refer to the incentive structure in the Latitude b
 making structure. These discussions go hand-in-hand as they specify how the blockchain functions in a distributed and
 decentralized manner in the real world.
 
+\noindent
 \subsubsection{Crytpoeconomics}
 Crytoeconomics refers to the mechanics of the protocol underlying the blockchain operations which creates incentives
 for the various stakeholders. For example, in the Latitude Blockchain it is possible to reward users for sharing their data
@@ -203,6 +210,7 @@ gained popularity among a notable number of blockchains \cite{dpos_steemit}. Thi
 technique to tackle Byzantine behavior. Latitude will employ techniques such as Minimal Slashing \cite{buterin_slashing}
 for Byzantine fault tolerance and safety under distributed asynchronous operation.
 
+\noindent
 \subsubsection{Governance}
 Governance refers to a decentralized manner in which decisions are made using a consensus mechanism on the blockchain.
 Decisions include basic constructs whether a node can join or leave the network. Or it can include key decisions on
@@ -221,13 +229,14 @@ council members shall be elected using the an election protocol on the blockchai
 nominate certain council members such as regulatory bodies who have general interest in user rights, privacy and
 enforcement. 
 
- - Crypto-incentives for honest operation.
- - Penalties for malicious intent.
- - Governance based on consensus and roles using a council.
- - Council members elected using voting, stake and established trust.
- - Some council members can have restricted access.
- - Eg: US govt can have voting rights on US data/users, etc.
-
+% - Crypto-incentives for honest operation.
+% - Penalties for malicious intent.
+% - Governance based on consensus and roles using a council.
+% - Council members elected using voting, stake and established trust.
+% - Some council members can have restricted access.
+% - Eg: US govt can have voting rights on US data/users, etc.
+%
+\noindent
 \subsubsection{User incentives}
 Token economics allow for the creation of what we call user incentives. These are protocol constructs in the blockchain
 that allow users to benefit from the value they create for the ecosystem. Refer to \cite{token_ecos} for an overview on
