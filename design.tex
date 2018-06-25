@@ -46,14 +46,14 @@ and other range queries, K-nearest neighbor searches, route optimization algorit
 \end{figure}
 
 
-Datastore
- - Optimized for Geographic, Geo-spatial data.
- - Location, Mapping data and computation.
- - Ability to Store, index, query and build smart contracts optimized for such data.
- - Support for various spatial indexes.
- - Location heatmaps.
- - Indexing road and driving data.
- - Primitives for storing driving data for autonomous vehicles
+%Datastore
+% - Optimized for Geographic, Geo-spatial data.
+% - Location, Mapping data and computation.
+% - Ability to Store, index, query and build smart contracts optimized for such data.
+% - Support for various spatial indexes.
+% - Location heatmaps.
+% - Indexing road and driving data.
+% - Primitives for storing driving data for autonomous vehicles
 
 \subsection{Cryptographic primitives}
 
@@ -132,13 +132,46 @@ grow. The proofs include the ones listed below but are not limited to these:
  \end{itemize}
 \subsection{Latitude Smart contract system}
 
-Smart contract system for Transportation applications.
- - Ability to convert “policies” such as GDPR into smart contract code.
- - Example, self destruct data after a time period.
- - Sandboxed trusted execution environment:
- - For algorithms:
-   - DriverScore, Location heatmaps, Statistics.
-   - Enforcing or verifying privacy and other govt policies/regulations.
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.90\textwidth]{lat_sc.png}
+  \caption{Architecture of the Latitude Smart Contract framework.}
+    \label{fig:lat-sc}
+\end{figure}
+
+Smart contracts are self-executing contracts with the terms of the agreement between various participants on the
+blockchain. For the Latitude blockchain, this can be the user, a regulatory body or an application written by an
+insurance company or the city. The contract is directly written into lines of code in a certain language. Popular smart
+contract frameworks today include ones used by Ethereum which runs on the Ethereum Virtual Machine (EVM), the Neo which
+runs on the NeoVM and the EOS blockchain which runs on the WASM (WebAssembly VM).
+
+The smart contract code and the agreements contained therein exist across the distributed, decentralized Latitude
+blockchain network.  Because of this, Smart contracts permit trusted transactions and agreements to be carried out among
+disparate, anonymous parties without the need for a central authority, legal system, or external enforcement mechanism.
+They render transactions traceable, transparent, and irreversible as the state is always available on the Latitude
+blockchain.
+
+Figure \ref{fig:lat-sc} shows the high-level architecture of the Latitude Smart contract system. Latitude uses a
+modified version of Solidity (or the new Vyper programming language) as used by the Ethereum Virtual Machine. The choice
+of this language is based on the production quality of the EVM, the language tools available in the community for
+creating contract code, developer support and talent pool. Latitude shall add enhancements to the language to support
+new spatial data types, indexes, cryptographic proofs and other mechanisms that are fundamental to the platform. Some of
+the goals of the smart contract system include the ability to convert data policies such as GDPR \cite{gdpr} into
+Latitude smart contract code which can then get automatically verified and enforced on the blockchain.  Also its
+possible to share location data in an emphemeral manner for a specific purpose -- the data item gets automatically
+destroyed using consensus and smart contract constructs on the blockchain. An example includes a user sharing their
+location with an app for a very small duration of time.
+
+As showsn in Figure \ref{fig:lat-sc}, the smart contract code has access to the datastore, cryptographic proofs
+(including algorithms to create proofs), an algorithm library (which hosts algorithms such as traffic, driver score
+etc). These are directly accessible through language constructs making it easy to write high quality smart contract
+code. The smart contract execution framework and related functionalities are accessible to dapps, entities such as
+users, governments and the Latitude Council (discussed later in the Governance section) on the system.
+
+% Smart contract system for Transportation
+% applications.  - Ability to convert “policies” such as GDPR into smart contract code.  - Example, self destruct data
+% after a time period.  - Sandboxed trusted execution environment: - For algorithms: - DriverScore, Location heatmaps,
+% Statistics.  - Enforcing or verifying privacy and other govt policies/regulations.
 
 
 \noindent
