@@ -1,4 +1,3 @@
-\noindent
 \section{The Latitude Blockchain}\label{sec:design}
 
 In this section, we present a high-level design of the Latitude blockchain. The full-version of this whitepaper shall
@@ -7,7 +6,6 @@ the rest of the design for the Latitude Blockchain. Its important to note here t
 might be possible to use an existing core blockchain for the underlying functionalities and build Latitude as a layer on
 top. We shall make these determinations in the full-version of the whitepaper.
 
-\noindent
 \subsection{Design overview}
 
 The purpose of the Latitude blockchain is to become the best platform in the world for decentralized applications for
@@ -23,7 +21,6 @@ technological innovations that will be built into it.
     \label{fig:lat-arch}
 \end{figure}
 
-\noindent
 \subsection{Spatial datastore}
 One of the central aspects of the Latitude blockchain is a geo-spatial datastore that fundamentally understands various
 datatypes that are specific to transportation data. This datastore can use existing GIS databases that allow
@@ -48,7 +45,6 @@ and other range queries, K-nearest neighbor searches, route optimization algorit
     \label{fig:geo_spatial_query}
 \end{figure}
 
-
 %Datastore
 % - Optimized for Geographic, Geo-spatial data.
 % - Location, Mapping data and computation.
@@ -58,7 +54,6 @@ and other range queries, K-nearest neighbor searches, route optimization algorit
 % - Indexing road and driving data.
 % - Primitives for storing driving data for autonomous vehicles
 
-\noindent
 \subsection{Cryptographic primitives}
 \label{sec:crypto}
 Latitude makes use of strong cryptographic protocols, primitives, encryptions, secure hash function, certificates,
@@ -135,7 +130,6 @@ grow. The proofs include the ones listed below but are not limited to these:
          for trusted and verifiable mapping / routing applications.
  \end{itemize}
 
-\noindent
 \subsection{Latitude Smart contract system}
 
 \begin{figure}[t]
@@ -176,14 +170,10 @@ users, governments and the Latitude Council (discussed later in the Governance s
 
 The Latitude smart contract system can becomes the world's first such smart contract framework specifically tailored for
 transportation data and applications.
-
 % Smart contract system for Transportation
 % applications.  - Ability to convert “policies” such as GDPR into smart contract code.  - Example, self destruct data
 % after a time period.  - Sandboxed trusted execution environment: - For algorithms: - DriverScore, Location heatmaps,
 % Statistics.  - Enforcing or verifying privacy and other govt policies/regulations.
-
-
-\noindent
 \subsection{Cryptoeconomics and Governance}
 
 Crytpeconomics and governance refer to the incentive structure in the Latitude blockchain and the decentralized decision
@@ -191,7 +181,7 @@ making structure. These discussions go hand-in-hand as they specify how the bloc
 decentralized manner in the real world.
 
 \noindent
-\subsubsection{Crytpoeconomics}
+{\bf Crytpoeconomics}
 Crytoeconomics refers to the mechanics of the protocol underlying the blockchain operations which creates incentives
 for the various stakeholders. For example, in the Latitude Blockchain it is possible to reward users for sharing their data
 for certain purposes. For example, users can be rewarded if they share traffic data or accident information or better
@@ -211,7 +201,7 @@ technique to tackle Byzantine behavior. Latitude will employ techniques such as 
 for Byzantine fault tolerance and safety under distributed asynchronous operation.
 
 \noindent
-\subsubsection{Governance}
+{\bf Governance}
 Governance refers to a decentralized manner in which decisions are made using a consensus mechanism on the blockchain.
 Decisions include basic constructs whether a node can join or leave the network. Or it can include key decisions on
 whether an upgrade should be mandated on every node, a given participant such as a data provider should be penalized. It
@@ -237,7 +227,7 @@ enforcement.
 % - Eg: US govt can have voting rights on US data/users, etc.
 %
 \noindent
-\subsubsection{User incentives}
+{\bf User incentives}
 Token economics allow for the creation of what we call user incentives. These are protocol constructs in the blockchain
 that allow users to benefit from the value they create for the ecosystem. Refer to \cite{token_ecos} for an overview on
 incentive mechanisms to reward users for various methods of participation in the network. In general, the Latitude token
@@ -267,9 +257,7 @@ User incentives:
    - Can be detected using a combination of consensus and incentives.
    - Best interest of users to act honestly by design.
 
-\noindent
 \subsection{Performance considerations}
-
 When thinking of performance, one of the key metrics that is hotly debated in the community is transactions per second.
 Bitcoin is know for its long time to produce a block, on the order of minutes which limits the number of transactions
 the network can process. Figure \ref{fig:tps_speed} shows a comparison of the major blockchains today with respect to
