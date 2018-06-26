@@ -36,13 +36,6 @@ vehicles since they use most of the similar datatypes mentioned above. The datas
 and other range queries, K-nearest neighbor searches, route optimization algorithms, etc. Figure
 \ref{fig:geo_spatial_query} shows some of the queries that such a datastore can support.
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.70\textwidth]{geospatial_query.png}
-  \caption{Examples of Geo-spatial queries that a spatial data-structure can support on the Latitude blockchain.}
-    \label{fig:geo_spatial_query}
-\end{figure}
-
 %Datastore
 % - Optimized for Geographic, Geo-spatial data.
 % - Location, Mapping data and computation.
@@ -52,23 +45,20 @@ and other range queries, K-nearest neighbor searches, route optimization algorit
 % - Indexing road and driving data.
 % - Primitives for storing driving data for autonomous vehicles
 
-\subsection{Cryptographic primitives}
-\label{sec:crypto}
-Latitude makes use of strong cryptographic protocols, primitives, encryptions, secure hash function, certificates,
-multi-party key distribution, proxy key re-encryption, Elliptic-curve based Digital Signatures \cite{ecdsa} and other
-state-of-the-art mechanisms to provide strong security, privacy, access control, confidentiality and anonymity
-guarantees. Specifically for geo-spatial data such as location, anonymity guarantees can be very important part of data
-sharing smart contracts and privacy policies such as GDPR \cite{gdpr}. Latitude provides anonymity guarantees using
-cryptographic set preserving computations as derived from research in \cite{kissner_set}. These can be suitably modified
-to allow for location-based anonymity which requires stronger guarantees when compared to set-based anonymity methods
-\cite{divanis_kanon,xu_loc_anon}.
+\subsection{Cryptographic primitives} \label{sec:crypto} Latitude makes use of state-of-the-art cryptographic protocols
+such as AES encryption, secure hash functions, PKI certificates, multi-party key distribution protocols, proxy key
+re-encryption schemes, Elliptic-curve based Digital Signatures \cite{ecdsa}. They help provide strong security, privacy,
+access control, confidentiality and anonymity guarantees. Anonymity guarantees are an important part of data-sharing
+smart contracts and privacy policies such as GDPR \cite{gdpr} especially for geo-spatial data such as location and maps.
+Latitude provides anonymity guarantees using cryptographic set-preserving computations as derived from research in
+\cite{kissner_set}. These can be suitably modified to allow for location-based anonymity which require stronger
+guarantees when compared to set-based anonymity methods \cite{divanis_kanon,xu_loc_anon}.
 
-Latitude also uses Merkle trees for cryptographic proof of audit, existence of data, verifiable computations and such
-\cite{becker2008}. These proof can be shared as certificates among participants or be used in the Latitude smart
-contract system discussed later. The proofs allow for verification such as if a certain amount of data was shared, or as
-simple as if a certain data exists. They also allow for the maintenance of a cryptographic log of all operations that
-happen on the network. These techniques are similar to the ones used by some of the other blockchains today
-\cite{buterin_merkle}.
+Latitude also uses Merkle trees for cryptographic proof of audit, existence of data and verifiable computations
+\cite{becker2008}. These proofs can be shared as certificates among participants or be used in the Latitude smart
+contract system discussed later. They allow for verification of data existence or data-sharing contracts. They also
+allow for the maintenance of a cryptographic log of all operations that happen on the network. These techniques are
+similar to the ones used by some of the other blockchains today \cite{buterin_merkle}.
 
 
 %Cryptographic primitives for:
@@ -91,40 +81,49 @@ happen on the network. These techniques are similar to the ones used by some of 
 % - Cryptographic proofs can be shared among entities, safely, securely.
 
 
-In addition to these standard primitives discussed above, Latitude provides a host of other proofs that are tailor made
-for geo-spatial, mapping, location and sensor data for driving. These proofs that can be used by applications, users and
+In addition to these standard primitives, Latitude provides a host of other proofs that are tailor made
+for geo-spatial, mapping, location and sensor data. These proofs can be used by applications, users and
 other participants in the network. The network can be extended to create new forms of proofs as the application needs
-grow. The proofs include the ones listed below but are not limited to these:
+grow. Below, we present the core set of cryptographic proofs that are unique to the Latitude blockchain:
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.70\textwidth]{geospatial_query.png}
+  \caption{Examples of Geo-spatial queries that a spatial data-structure can support on the Latitude blockchain.}
+    \label{fig:geo_spatial_query}
+\end{figure}
 
  \begin{itemize}
      \item Proof of location: This is perhaps the most easily motivated functionality that the Latitude blockchain can
          provide. Proof of location is a cryptographic credential that proves that a given user, entity or participant
-         is physically present at a given location or a relative location to another participant. The proof of location
+         is/was physically present at a given location at a specific time. The location could also be relative to
+         another participant or landmark. The proof of location
          has been explored by other blockchains such as Platin \cite{platin}. Latitude shall provide the mobile, browser
          and sensor SDKs that can directly tie into the datastore to provide consensus based proofs. These proofs can
          unlock applications such as access to facilities or help increase trust in crowd-sourced mapping, traffic and incident
          reports.
      \item Proof of ride: Provides a proof that a particular user has taken a ride from point A to point B using a
          certain type of transport. This proof can be used across multi-modal ride platforms such as bike or car rides.
-         This can be later extended to include bus trips, flights, train rides and so on. The proof of ride is also
-         built using the same mobile SDK which can gather trust on the nature and parameters of the ride.
-     \item Proof of landmark (mapping): This proves the existence of a particular landmark, such as a monument, a
+         This can be extended to include bus trips, flights, train rides and so on. The proof of ride credential will be
+         available via the Latitude mobile SDK on various platforms. Using the mobile SDK to construct these proofs also
+         adds to the amount of trust on the nature and parameters of the ride.
+     \item Proof of landmark (mapping): This proves the existence of a particular landmark such as a monument, a
          building, a sign post at a given lat/lng. This can also be used to prove the existence of a particular road or
-         the lack of. These proofs can be constructed using the proof of location and added consensus among users and
-         can form the backbone for verified mapping and landmark data.
+         the lack of. These proofs can be constructed using the proof of location combined with consensus among users.
+         This proof can become the backbone for verified mapping and landmark data-based applications.
      \item Proof of driver score: This proof can be computed on the blockchain over the data aggregated on the
          datastore. The algorithm itself shall be made available to the nodes either as an executable docker image or an
-         open-source version. This allows different nodes to run the computation and create a certificate of a certain
-         driver score which can then be attributed to the driver or user. This open framework can also allow different
+         open-source version. This allows different nodes to run the computation and create a certificate of 
+         driver score which can then be attributed to the driver. This open framework can also allow different
          driver score algorithms to co-exist in the system creating a community where better driver score algorithms can
          be agreed upon and used as the industry standard.
      \item Proof of traffic:  Similar to the driver score, traffic is also an algorithm that looks at the statistics of
          location and speed data on roads. The proof is similarly computed through consensus and recorded as a
          certificate on the blockchain. The proof could be about real-time traffic or historic traffic patterns which
-         can be shared with smart city applications or census or regulatory bodies.
+         can be shared with smart city applications, the Census Bureau or other regulatory bodies.
      \item Proof of routes: Similar to the functionality in the popular Waze app, this is about whether there exists a
-         certain route (or a better route) from point A to point B. More the consensus higher the trust and for example,
-         if a user actually makes that route from A to B, that helps create the proof of its existence. This is useful
+         certain route (or a better route) from point A to point B. More the consensus, higher the trust. For example,
+         if a user actually takes the route from A to B and provides a proof of ride, that helps create the proof of its existence. This is useful
          for trusted and verifiable mapping / routing applications.
  \end{itemize}
 
