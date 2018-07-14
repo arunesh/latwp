@@ -1,0 +1,169 @@
+\documentclass[preprint,10pt]{elsarticle}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\ps@pprintTitle}{\footnotesize\itshape
+       Preprint submitted to \ifx\@journal\@empty Elsevier
+       \else\@journal\fi\hfill\today}{06.2018}{}{}
+\makeatother
+
+\usepackage[margin=2.5cm]{geometry}
+
+\newcommand{\fscale}[1]{#1\linewidth}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+
+%-----------------------------------------------------------------------------
+%  Colors
+%-----------------------------------------------------------------------------
+\usepackage{pagecolor}
+\definecolor{linen}{RGB}{240,240,230}
+\definecolor{fwhite}{RGB}{255,250,240}
+\definecolor{oldlace}{RGB}{253,245,230}
+\definecolor{awhite}{RGB}{250,235,215}
+\definecolor{pwhip}{RGB}{255,239,213}
+\definecolor{peach}{RGB}{255,218,185}
+\definecolor{ivory}{RGB}{255,255,240}
+\definecolor{seashell}{RGB}{	255,245,238}
+
+\usepackage{sectsty}
+\sectionfont{\Large \textsf}
+\subsectionfont{\large \textsf}
+
+\usepackage{amsmath}
+\newcommand{\mr}[1]{\mathrm{#1}}  % Roman font for the math mode
+\newcommand{\mi}[1]{\mathit{#1}}  % Italic font for the math mode
+\newcommand{\mc}[1]{\mathcal{#1}} % Caligrafic (script) font for the math mode
+\newcommand{\ms}[1]{\mathsf{#1}}  % Sans font for the math mode (vectors and matrices)
+\newcommand{\mb}[1]{\mathbf{#1}}  % Bold font for the math mode (vectors and matrices)
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Rule}[section]
+
+\newtheorem{property}{Property}
+
+\newtheorem{theorem}{Theorem}
+
+\usepackage{cleveref}
+\crefformat{section}{\textbf{\S#2#1#3}} % see manual of cleveref, section 8.2.1
+\crefformat{subsection}{\textbf{\S#2#1#3}}
+\crefformat{subsubsection}{\textbf{\S#2#1#3}}
+
+\renewcommand{\cref}[1]{\textbf{\S\ref{#1}}}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+\graphicspath{{./fig/}}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+
+\usepackage[titletoc]{appendix}
+\usepackage[T1]{fontenc}
+
+\usepackage{xcolor, soul}
+\sethlcolor{oldlace}
+
+\usepackage{lineno}
+\usepackage{url}
+\bibliographystyle{unsrt}
+
+\patchcmd{\abstract}{Abstract}{Summary}{}{}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+\title{\textsf{Latitude: A Blockchain for the Transportation Industry\tnoteref{title1}}}
+\tnotetext[title1]{Version 1.1}
+
+\author{Latitude Labs\corref{auth1}}
+\cortext[auth1]{Latitude Labs at https://latitude0x.com}
+\address{Silicon Valley, California}
+
+\begin{abstract}
+
+Blockchains are rapidly becoming the new vehicles for decentralized applications for the data sharing economy. By their
+    design, they are able to create privacy aware, secure, trusted, verifiable and user incentivized ways of sharing
+    data. This ability has created a new wave of applications in various industries which are disrupting the status quo
+    of the incumbents. Also, the Transportation industry is seeing a shift in terms of the amount of data that has
+    become available due to mobile phones, dedicated sensors and crowd-sourced availability of data. The industry has a
+    large number of applications, users and regulations which can benefit from data sharing if it can be done correctly.
+
+ We present the Latitude blockchain which is designed to be the best blockchain for transportation applications.
+    Latitude is designed using principles derived from the core decentralized blockchain technologies available today
+    combined with fundamental considerations for the unique aspects of Transportation data and applications. Latitude
+    includes the world's first smart contract system specifically tailored for geo-spatial, mapping, location and sensor
+    data and related applications. The system is powered by a geo-spatial decentralized datastore which can scale to
+    planet level storage capabilities incentivized by a token economics built over the LAT (Latitude Token).
+
+    The Latitude network is also provisioned with a library of algorithms, both open source and closed form, which allow
+    Government, insurance companies and regulators to compute, certify and create cryptographic proofs which can help enforce policies
+    or verify contracts.  Latitude has a decentralized Governance model using a Council system which is resistant to
+    collusion and Byzantine behavior and is incentivized to maintain honest and proper operation of the network.
+
+    Latitude can support four classes of applications. First, Ridesharing applications consist of the sharing economy
+    applications for multi-modal ridesharing and transport. Using Latitude, it becomes possible to create better
+    incentives for ride providers and users including incentives for data sharing and route optimizations. This also
+    allows regulatory bodies to participate in the execution of these applications using smart contracts. Second,
+    Telematics applications such as Usage-based Insurance (UBIs) and fleet management can benefit from real-time or
+    historical data and corresponding intelligent algorithms, thus providing shared mutual benefits. The third class of
+    application include mapping and location.  Using tangible user incentives while providing strong trust, privacy and
+    security for user data, it is possible to create new or better data sharing applications (similar to Waze among
+    others) on the Latitude platform. Finally, all the geo-spatial, location, mapping and real-time city level data can be used by the City and State
+    governments for smart city applications to provide a better quality of life for their citizens.
+\newline \newline \newline \end{abstract}
+
+\begin{keyword}
+	\textsf{location \sep cryptography\sep decentralization \sep blockchain \sep ethereum \sep database \sep sql
+    \sep access control \sep p2p \sep tokens \sep incentives \sep mechanism design \sep byzantine
+    faults \sep data sharing \sep latitude \sep longitude \sep driverscore \sep mapping \sep transportation \sep
+    insurance}
+\end{keyword}
+
+\end{frontmatter}
+
+\newpage
+\tableofcontents
+\newpage
+
+%-----------------------------------------------------------------------------
+%  INTRODUCTION
+%-----------------------------------------------------------------------------
+\input{intro}
+
+\input{blockchain}
+
+\input{design}
+
+\input{apps}
+
+%\input{mech}
+
+\input{conclusion}
+
+% One section per vertical.
+
+% Core blockchain aspects. Smart Contract system. DataStore etc.
+
+% Governance. Consensus, cryptoeconomics.
+
+%-----------------------------------------------------------------------------
+%  OVERALL DESIGN SECTION
+%-----------------------------------------------------------------------------
+%\input{design}
+
+%----------------------------------------------------------------------------- BIBLIOGRAPHY
+%-----------------------------------------------------------------------------
+
+\input{teambio}
+
+\section{References}
+\bibliography{latitude.bib}
+
+\end{document}
