@@ -1,7 +1,7 @@
 
 default:
 	pdflatex fullwp.tex
-	bibtex latitude
+	bibtex fullwp 
 	pdflatex fullwp.tex
 	evince fullwp.pdf
 
