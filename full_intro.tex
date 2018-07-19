@@ -1,0 +1,127 @@
+\section{Introduction}\label{sec:intro}
+
+There is a fundamental shift happening in the transportation industry due to the availability of data and resulting
+applications in ways that was not possible before. For instance, due to the proliferation of mobile phones and real-time
+location data, it became possible to disrupt the traditional taxi-based transportation market using Ride-sharing
+applications. Similar trend in real-time traffic and incident data collected in a crowd-sourced manner has led to apps
+like Waze which have improved our daily commute life. Using data-sharing it also became possible to build apps that can
+do multi-modal ride computations (bike, scooters, etc). Smart cities are able to use transportation data for
+urban planning, zoning and development use cases. Insurance companies are able to provide per-mile insurance using
+driver behavior determined by data from sensors.
+
+\noindent
+{\bf \textsf Benefits of Data sharing:}
+
+%Big data has become the fuel for Decision making, product evolution, AI applications, including the use of Deep Learning
+%and other techniques.
+
+Users of these applications are providing a staggering amount of data. However, due to centralization this data is
+subject to policies, security and privacy practices that are not in the user's control. Moreover, its not possible for
+regulators or city governments to use this data for benefit of their citizens. Centralization creates data silos which
+dramatically reduce the utility of the technology. The recent breaches in data usage, security and privacy have shown
+that users want control over who is using their data and how. This includes how advertisers are using their data, for
+example. Also, regulators want to make sure policies are implemented correctly but have no programmatic way of doing so.
+
+Now, imagine if these hurdles can be taken care of using the right technology, would data sharing enable new and
+disruptive applications? Lately, Blockchain technology has emerged as a way for creating decentralized data-based
+applications in a secure, privacy-aware, verifiable and trusted manner. The possibility of enabling data sharing using
+blockchain technology with cryptographically protected sharing methods has the potential to change the sharing economy.
+
+We present Latitude, which is designed to be the best blockchain for the Transportation industry. Latitude allows the
+development of decentralized apps using smart contracts powered by a geo-spatial datastore. This is built off strong
+cryptographic proofs and primitives that provide security, privacy and anonymity guarantees.  For the Transportation
+Industry, such data sharing can help solve some critical problems.  For example, cities can share the data they
+collected about transport patterns with different stake holders such as transportation companies to reduce the traffic
+jams during rush hour \cite{traffic_jam}. First responders and aid workers can share data between them to better coordinate
+disaster relief efforts \cite{bharosa_2010}.
+
+For the common user, Latitude can help build decentralized apps that can provide incentives to both drivers and users
+for sharing their data. This creates new incentive structures for apps such as ride sharing or per-mile insurance that
+were not possible before. While Latitude allows safe and incentivized sharing of data, it is also a platform for
+building decentralized applications for the Transportation Industry. For example, a city can build applications on
+Latitude to understand traffic patterns or regulate driver licenses. Centralized Telematics exchanges such a Verisk or
+Octo can be fully decentralized and open to everyone. Their operations can be replaced by intelligent and
+cryptographically strong smart contracts.
+
+Latitude will provide a state-of-the-art environment for developers including the availability of a production
+geo-spatial datastore, a library of smart contracts and a community to foster new application development. Latitude
+shall include mobile SDKs to help build mobile apps that can directly tie into the platform. We believe that Latitude
+has the potential to disrupt existing centralized applications in the Transportation Industry and create new ones that
+were simply not possible before.
+
+%
+%- Centralized solution examples:
+%    - Telematics data exchanges.
+%    - Mapping and location data: privacy security issues. Lack of user control.
+%    - Centralization creates DATA SILOS. Explain and expand.
+%- What powers this is data, being able to share data, analytics, computation using AI, in a trustworthy privacy-aware
+%manner.
+%
+%- The industry needs a solution that can allow new ways of sharing the data while providing strong unbreakable guarantees
+%of security privacy etc.
+
+%\subsection{What are blockchains}
+%Blockchain is a public register in which transactions between two users belonging to the same network are stored in a secure, verifiable
+%and permanent way. The data relating to the exchanges are saved inside cryptographic blocks, connected in a hierarchical
+%manner to each other. This creates an endless chain of data blocks -- hence the name blockchain -- that allows you to
+%trace and verify all the transactions you have ever made.
+%
+%The introduction of Bitcoin \cite{nakamoto2009bitcoin} triggered a new wave of decentralization in computing.
+%Bitcoin illustrated a novel set of benefits: decentralized control, where ``no one'' owns or controls the network;
+%immutability, where written data is tamper-resistant (``forever''); and the ability to create \& transfer assets on the
+%network, without reliance on a central entity.
+%
+%The initial excitement surrounding Bitcoin stemmed from its use as a token of value, for example as an alternative to
+%government-issued currencies.  As people learned more about the underlying blockchain technology, they extended the
+%scope of the technology itself (e.g. smart contracts), as well as applications (e.g. intellectual property).
+%
+%Bitcoin was the first such blockchain to introduce concept of full decentralization, but Ethereum has made this a
+%general platform for executing arbitrary applications called dapps using smart contracts and a wide range of other
+%tools. Since Ethereum, there has been an explosion in blockchain technology to allow a wide range of distributed
+%decentralized applications to run over a network of untrusted arbitrary nodes over the planet, which almost mimic the
+%structure and spread of the Internet.
+
+\noindent
+{\bf \textsf Related projects:}
+
+There are a host of projects that are leveraging the blockchain technology to disrupt the sharing economy such as
+renting homes or cars (AirBnb on the blockchain), etc. Projects such as the Origin Protocol and Uchain among others are
+building platforms that empower developers and businesses to create their own decentralized marketplaces for sharing
+data in accordance with strict controls on the blockchain.  Such Blockchain based approaches make it quick and easy for
+organizations to develop and manage listings for assets and services. Similar data sharing can yield benefits in the
+Internet of Things (IoT) landscape. Projects such as the IoTex blockchain are building solutions to collect, store and
+share data from IOT sensors, protected with a smart contract system.  Platin \cite{platin} is a project that focuses on
+proof of location on the blockchain and can be used for applications involving location sharing in a trusted and secure
+manner. Thus in many industry verticals it is now becoming apparent that a well-designed blockchain-based platform can
+be disruptive to centralized incumbent players. Such a platform can also foster the creation new applications that were
+simply not possible before. This is a win-win scenario for users, governments and regulators alike.
+
+Till date, there has been a void for a decentralized planet-wide system for all transportation applications. Latitude is
+designed to fill that void by providing core blockchain constructs tailored for transportation applications including
+specific SDKs and software components for each specific industry vertical (such as Ride-sharing, Usage-based insurance,
+etc).
+
+The rest of this whitepaper is organized as follows.  In Section \ref{sec:design}, we present the design of the Latitude
+blockchain, including the core building blocks that make it work well for applications in the transportation industry.
+In Section \ref{sec:apps}, we discuss details of four different classes of applications that can be built on Latitude
+and how third-party companies can build decentralized applications on the platform. Each of these classes correspond to
+different markets or industries that Latitude can support within the Transportation umbrella. We shall also discuss the
+specific modules that Latitude will have to fully support each of these classes of applications. In the Appendix
+\ref{sec:blockchain}, we discuss why Blockchains are the right technology to disrupt the Transportation industry.
+
+%We are in the midst of building a new Internet. Blockchain networks like Ethereum have popularized the idea of
+%unstoppable, owner less applications that are run on an open network of untrusted but incentivized nodes without the
+%oversight of a central authority. An increasing number of these decentralized applications (\DJ apps) are being created
+%everyday with evolving data storage needs. The first generation of these dapps stored their data entirely on a
+%blockchain itself while the current ones are storing it on decentralized file storage systems like IPFS with just hashes
+%of the data stored on the blockchain. Although this method works for dapps with simple storage needs like the need for
+%storing data as a blob, it is very limiting for dapps with more complex requirements such as the need to store data at a
+%more fine grained level and efficiently querying it. A popular option is then to use a cloud hosted database (ex:
+%Google’s Cloud SQL) but that turns a dapp into a non-dapp by introducing centrality into the system. \newline\newline
+%
+
+%Rest of the paper is structured as follows: in section 2, we discuss some related work. Section 3 presents the overall
+%design of the system, section 4 presents the network subsystem, section 5 presents the database subsystem and section 6
+%presents our approach to dealing with problems that arise in a network made up of untrusted nodes and discusses an
+%incentive mechanism to make them behave as per system's needs. In section 7, we propose a message exchange protocol in
+%the same vein as http but for relational data sharing. Section 8 concludes the paper.
